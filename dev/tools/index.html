@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Mighty-X5 Guide</title>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <!-- link data-turbolinks-track="true" href="/assets/application-cd7468b62c111da339d2b0e78a51b612.css" media="all" rel="stylesheet" type="text/css" / -->
+    <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+    <script src="http://xinternet.github.io/mx5/dev/assets/javascripts/html5shiv.min.js"></script>
+    <script src="http://xinternet.github.io/mx5/dev/assets/javascripts/respond.min.js"></script>
+    <![endif]-->
+    <!-- script data-turbolinks-track="true" src="/assets/application-578ea6452270c5d1f3e862f001909e1a.js" type="text/javascript"></script -->
+  </head>
+  <body class='ideator tools index no-header'>
+    <div class='pull-right'>
+      <a href="http://xinternet.github.io/mx5/dev/tools/" class="btn btn-warning btn-xs" target="_blank">새창으로열기</a>
+    </div>
+    <div class='container'>
+      <div class='page-header'>
+        <h2>
+          Tools
+          <small>
+            - 개발 도구들
+            <a data-content='한번 써봐요. 편한지' data-toggle='popover' href='#' id='btn-info' title='Tools 소개'>
+              <i class='fa fa-info-circle'></i>
+            </a>
+          </small>
+        </h2>
+      </div>
+      <div class='row'>
+
+        <div class='col-md-3'>
+          <div class='panel panel-default'>
+            <div class='panel-heading'>
+              <h4>Toad2Xmlx</h4>
+            </div>
+            <div class='panel-body'>
+              Toad 용 쿼리와 Xmlx용 쿼리의 파라미터를 자동 변환합니다.
+              <br>
+              (파라미터 :params <-> #params#)
+            </div>
+            <div class='panel-footer text-center'>
+              <a class='btn btn-warning btn-sm' href='/tools/toad2xmlx'>
+              바로가기 <i class='fa fa-rocket'></i></a>
+            </div>
+          </div>
+        </div>
+      <!-- .col-md-3 -->
+      <!-- .panel.panel-default -->
+      <!-- .panel-heading -->
+      <!-- %h4 MssqlDeclare -->
+      <!-- .panel-body -->
+      <!-- Mssql 용 쿼리에서 @변수의 선언부를 자동 작성합니다. -->
+      <!-- .panel-footer.text-center -->
+      <!-- %a.btn.btn-warning.btn-sm{:href => "/tools/mssqldeclare"} -->
+      <!-- \바로가기 -->
+      <!-- %i.fa.fa-rocket -->
+        
+        <div class='col-md-3'>
+          <div class='panel panel-default'>
+            <div class='panel-heading'>
+              <h4>Mssql2Xmlx</h4>
+            </div>
+            <div class='panel-body'>
+              Mssql 용 쿼리와 Xmlx용 쿼리의 파라미터를 자동 변환합니다.
+              <br>
+              (파라미터 @params <-> #params#)
+            </div>
+            <div class='panel-footer text-center'>
+              <a class='btn btn-warning btn-sm' href='/tools/mssql2xmlx'>
+              바로가기 <i class='fa fa-rocket'></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-md-3'>
+          <div class='panel panel-default'>
+            <div class='panel-heading'>
+              <h4>Unicode</h4>
+            </div>
+            <div class='panel-body'>
+              Unicode encoding, decoding
+              <br>
+              (ex, spring message)
+            </div>
+            <div class='panel-footer text-center'>
+              <a class='btn btn-warning btn-sm' href='/tools/unicode'>
+                바로가기
+                <i class='fa fa-rocket'></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div><!-- .row -->
+    </div><!-- .container -->
+  <script>
+    $(function() {
+      $('#btn-info').popover();
+    })
+  </script>
+
+
+  </body>
+</html>
