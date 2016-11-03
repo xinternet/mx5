@@ -30,12 +30,225 @@
         <div class="col-md-10 col-md-offset-1">
 
           <div class="page-header">
-            <h2>Grid.js 속성</h2>
+            <h1>Grid.js</h1>
           </div>
 
-          <h1 id="layout">
-            MDI Layout
-          </h1>
+          <p>
+            SlickGrid를 사용하기 위해 <code>*.Grid.js</code> 파일에 정의하는 속성을 안내합니다.
+          </p>
+
+          <h4>*.Grid.js 예제</h4>
+
+          <pre class="language-javascript">
+
+var columns_dg_1 = [ 
+  {fieldName: 'COMPANY_CODE', width: 80,  must_input: 'Y', isKey: 'Y', visible: false, readonly: false, editable: true, sortable: true, header: {text: "시스템코드"}, styles: _Styles_textc, editor: _Editor_text, lookupdisplay: false },
+  {fieldName: 'SYS_ID',       width: 80,  must_input: 'Y', isKey: 'Y',visible: true, readonly: false, editable: true, sortable: true, header: {text: "시스템코드"}, styles: _Styles_textc, editor: _Editor_text, lookupdisplay: false },
+  {fieldName: 'SYS_NAME',     width: 100, must_input: 'N', visible: true, readonly: false, editable: true, sortable: true, header: {text: "시스템명"}, styles: _Styles_text, editor: _Editor_text, lookupdisplay: false },
+  {fieldName: 'USE_YESNO',    width: 60,  must_input: 'N', default_value: 'N', visible: true, readonly: false, editable: true, sortable: true, header: {text: "사용유무"}, styles: _Styles_checkbox, editor: _Editor_text, lookupdisplay: false },
+  {fieldName: 'SORT_ORDER',   width: 60,  must_input: 'N', visible: true, readonly: false, editable: true, sortable: true, header: {text: "정렬순서"}, styles: _Styles_numberc, editor: _Editor_number, lookupdisplay: false }
+];
+
+</pre>
+          
+          <h3>칼럼 속성</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th>속성</th>
+                <th>설명</th>
+              </tr>              
+            </thead>
+            <tbody>
+              <tr>
+                <td>fieldName</td>
+                <td><code>(string)</code> 필드명. 예) 'USER_NAME'</td>
+              </tr>
+              <tr>
+                <td>width</td>
+                <td><code>(integer)</code> 너비. 예) 100</td>
+              </tr>
+              <tr>
+                <td>must_input</td>
+                <td><code>(String)</code> 필수입력 여부 ( 'Y' , 'N' ). 예) 'Y'</td>
+              </tr>
+              <tr>
+                <td>visible</td>
+                <td><code>(Boolean)</code> 보이기 ( true , false ). 예) true</td>
+              </tr>
+              <tr>
+                <td>readonly</td>
+                <td><code>(Boolean)</code> 읽기전용 ( true , false). 예) true</td>
+              </tr>
+              <tr>
+                <td>editable</td>
+                <td><code>(Boolean)</code> 편집가능여부 ( true , false). 예) true</td>
+              </tr>
+              <tr>
+                <td>sortable</td>
+                <td><code>(Boolean)</code> 정렬여부 ( true , false). 예) true</td>
+              </tr>
+              <tr>
+                <td>header</td>
+                <td><code>(Object)</code> 헤더 정보. 예) {text: "회사코드"}</td>
+              </tr>
+              <tr>
+                <td>styles</td>
+                <td>
+                  <code>(Object)</code> 스타일. 예) _Styles_textc<br />
+                  <dl class="dl-horizontal">
+                    <dt>_Styles_text</dt>
+                    <dt>Text, Left, 텍스트</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Styles_textc</dt>
+                    <dt>Text, Center, 텍스트</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Styles_textr</dt>
+                    <dt>Text, Right, 텍스트</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Styles_seq</dt>
+                    <dt>Number, Center, 순번</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Styles_number</dt>
+                    <dt>Number, Right, 숫자</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Styles_numberc</dt>
+                    <dt>Number, Center, 숫자</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Styles_numberl</dt>
+                    <dt>Number, Left, 숫자</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Styles_numberf1</dt>
+                    <dt>Number, Right, 소수점 1자리</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Styles_numberf2</dt>
+                    <dt>Number, Right, 소수점 2자리</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Styles_numberf3</dt>
+                    <dt>Number, Right, 소수점 3자리</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Styles_numberf4</dt>
+                    <dt>Number, Right, 소수점 4자리</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Styles_date</dt>
+                    <dt>Date, Center, 날짜</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Styles_datemonth</dt>
+                    <dt>Date, Center, 년월</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Styles_datetime</dt>
+                    <dt>Date, Center, 시간</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Styles_checkbox</dt>
+                    <dt>Checkbox, Center, 체크박스</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Styles_tree</dt>
+                    <dt>Tree, Left, 트리</dt>
+                  </dl>
+                </td>
+              </tr>
+              <tr>
+                <td>editor</td>
+                <td>
+                  <code>(Object)</code> 편집기. 예) _Editor_text
+                  <dl class="dl-horizontal">
+                    <dt>_Editor_number</dt>
+                    <dt>Number, Right, 숫자</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Editor_numberf1</dt>
+                    <dt>Number, Right, 소수점 1자리</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Editor_numberf2</dt>
+                    <dt>Number, Right, 소수점 2자리</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Editor_numberf3</dt>
+                    <dt>Number, Right, 소수점 3자리</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Editor_numberf4</dt>
+                    <dt>Number, Right, 소수점 4자리</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Editor_text</dt>
+                    <dt>Text, Left, 텍스트</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Editor_multiline</dt>
+                    <dt>Multiline Text, Left, 텍스트</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Editor_date</dt>
+                    <dt>Date, Center, 날짜</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Editor_datemonth</dt>
+                    <dt>Date, Center, 년월</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Editor_datetime</dt>
+                    <dt>Date, Center, 시간</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Editor_checkbox</dt>
+                    <dt>Checkbox, Center, 체크박스</dt>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt>_Editor_dropdown</dt>
+                    <dt>Select, Left, 선택</dt>
+                  </dl>
+                </td>
+              </tr>
+              <tr>
+                <td>lookupDisplay</td>
+                <td>
+                  <code>(String)</code> GetItem에서 값 말고 명칭 읽기 ( true , false ). 예) true
+                </td>
+              </tr>
+              <tr>
+                <td>button</td>
+                <td>
+                  <code>(String)</code> 버튼 ( 'action' ). 예) "action"
+                </td>
+              </tr>
+              <tr>
+                <td>alwaysShowButton</td>
+                <td>
+                  <code>(Boolean)</code> 버튼 항상 보이기 ( true , false ). 예) true
+                </td>
+              </tr>
+              <tr>
+                <td>merge</td>
+                <td>
+                  <code>(Boolean)</code> 그룹에서 같은 칼럼 안보이게 하기 ( true , false ). 예) true
+                </td>
+              </tr>
+              <tr>
+                <td>footerExpr</td>
+                <td>
+                  <code>(String)</code> 버튼 항상 보이기 ( true , false ). 예) true
+                </td>
+              </tr>
+            </tbody>
+          </table>
           
           <div class="panel panel-default">
             <div class="panel-body">
