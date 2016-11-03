@@ -6,6 +6,7 @@ function x_InitForm2(){
   var arrTheme = [{code:'x5', label:'x5 기본형'}];
   _X.DDLB_SetData(S_THEME_ID , arrTheme, 'x5', false, true);
 
+
   // // tab sql - event 
   // $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   //   if(typeof(ed_before)=="undefined") setEditor( "before" );
