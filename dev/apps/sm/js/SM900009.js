@@ -2,11 +2,10 @@
 function x_InitForm2(){
   _X.UnBlock();
   
-  var arrTheme = [{code:'x5', label:'x5 기본형'}];
-  _X.DDLB_SetData(S_THEME_ID , arrTheme, 'x5', false, true);
+  var arrTheme = [{code:'https://xinternet.github.io/mx5/docs/grid.js.html', label:'Grid.js '}];
+  _X.DDLB_SetData(S_GUIDE_TYPE , arrTheme, '', false, false);
 
   // 전체 태그 가져오기
-  getLayoutTags();
   // // tab sql - event 
   // $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   //   if(typeof(ed_before)=="undefined") setEditor( "before" );
@@ -23,8 +22,8 @@ function x_DAO_Retrieve2(a_dg){
 }
 
 function xe_EditChanged2(a_obj, a_val){
-  if(a_obj==S_SYS_ID) {
-    drawPreview();
+  if(a_obj==S_GUIDE_TYPE) {
+    $("#grid_1 iframe").prop("src", a_val);
     //console.log(max_code_q)
   }
 }
