@@ -1,0 +1,120 @@
+@CHARSET "UTF-8";
+
+/* pane */
+.ui-layout-pane {
+	padding: 0;
+	background-color: #fff;
+	border: 1px solid #98c0f4;
+	overflow: auto;
+}
+
+/* NORTH pane */
+.ui-layout-pane-north {
+	border: 0 none;
+}
+
+/* SOUTH pane */
+.ui-layout-pane-south {
+	border-left: 0 none;
+	border-right: 0 none;
+	border-bottom: 0 none;
+	overflow: hidden;
+}
+
+/* WEST pane */
+.ui-layout-pane-west {
+	border-left: 0 none;
+	overflow: hidden;
+}
+
+/* EAST pane */
+.ui-layout-pane-east {
+	border-right: 0 none;
+}
+
+/* CENTER pane */
+.ui-layout-pane-center {
+	border-left: 0 none;
+	border-right: 0 none;
+	overflow-x: hidden;
+}
+
+/* pane resizer */
+.ui-layout-resizer-west-dragging, .ui-layout-resizer-west-open:hover {
+	background: url("./jqueryLayout/resizable-w.gif") repeat-y center;
+}
+
+.ui-layout-resizer-east-dragging, .ui-layout-resizer-east-open:hover {
+	background: url("./jqueryLayout/resizable-e.gif") repeat-y center;
+}
+
+.ui-layout-resizer-west-open {
+	background-color: #fff;
+	border-top: 0 none;
+	border-bottom: 0 none;
+	border-right:1px solid #98c0f4;
+}
+
+.ui-layout-resizer-east-open {
+	background-color: #fff;
+	border-top: 0 none;
+	border-bottom: 0 none;
+	border-left:1px solid #98c0f4;
+}
+
+.ui-layout-resizer-dragging-limit {
+	background: #ff3300 !important;
+}
+
+/* IE6 * HACK - always show resizer graphics because IE6 cannot understand elem:hover */
+/** html .resizer-north { background: url(../img/resizable-n.gif) repeat-x center !important; } */
+* html .resizer-south { background: url(./jqueryLayout/resizable-s.gif) repeat-x center !important; }
+* html .resizer-west-open { background: url(./jqueryLayout/resizable-w.gif) repeat-y center !important; }
+* html .resizer-east-open { background: url(./jqueryLayout/resizable-e.gif) repeat-y center !important; }
+* html .resizer-south ,
+* html .resizer-west-open ,
+* html .resizer-east-open {
+	opacity: 0.1 !important;
+	filter: alpha(opacity=10) !important;
+}
+
+/* toggler */
+.ui-layout-toggler-west-open {
+/*	background: url("./jqueryLayout/open-toggler-left.gif") no-repeat center center; */
+}
+
+.ui-layout-toggler-east-closed {
+	background: url("./jqueryLayout/closed-toggler-left.gif") no-repeat center center; 
+}
+
+.ui-layout-toggler-east-open {
+/*	background: url("./jqueryLayout/open-toggler-right.gif") no-repeat center center; */
+}
+
+.ui-layout-toggler-west-closed {
+	background: url("./jqueryLayout/closed-toggler-right.gif") no-repeat center center;
+}
+
+/* Resizer */
+.ui-layout-resizer-west-closed, .ui-layout-resizer-east-closed {
+	background-color: #d9e8fb;
+	border-top:1px solid #98c0f4;
+	border-bottom:1px solid #98c0f4;
+}
+
+.ui-layout-resizer-west-closed {
+	border-right:1px solid #98c0f4;
+}
+
+.ui-layout-resizer-east-closed {
+	border-left:1px solid #98c0f4;
+}
+
+.ui-layout-resizer-west-closed:hover, .ui-layout-resizer-east-closed:hover {
+	background-color: #d2edf2;
+}
+
+.ui-state-disabled {
+    opacity: 1; 
+    filter:Alpha(Opacity=100);
+}
