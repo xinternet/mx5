@@ -25,7 +25,7 @@
     <!-- script type="text/javascript" src="/Mighty/3rd/typeahead/typeahead.bundle.min.js"></script -->
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container" style="margin-left: 50px;">
       <div class="row">
         <div class="col-md-9">
 
@@ -82,29 +82,34 @@ var columns_dg_1 = [
               </tr>
               <tr>
                 <td>visible</td>
-                <td><code>(Boolean)</code> 보이기 ( true , false ). 예) true</td>
-                <td><code>must_input: 'Y'</code></td>
+                <td><code>(Boolean)</code> 보이기 ( true , false )</td>
+                <td><code>visible: true</code></td>
               </tr>
               <tr>
                 <td>readonly</td>
-                <td><code>(Boolean)</code> 읽기전용 ( true , false). 예) true</td>
+                <td><code>(Boolean)</code> 읽기전용 ( true , false)</td>
+                <td><code>readonly: true</code></td>
               </tr>
               <tr>
                 <td>editable</td>
-                <td><code>(Boolean)</code> 편집가능여부 ( true , false). 예) true</td>
+                <td><code>(Boolean)</code> 편집가능여부 ( true , false)</td>
+                <td><code>editable: true</code></td>
               </tr>
               <tr>
                 <td>sortable</td>
-                <td><code>(Boolean)</code> 정렬여부 ( true , false). 예) true</td>
+                <td><code>(Boolean)</code> 정렬여부 ( true , false)</td>
+                <td><code>sortable: true</code></td>
               </tr>
               <tr>
                 <td>header</td>
-                <td><code>(Object)</code> 헤더 정보. 예) {text: "회사코드"}</td>
+                <td><code>(Object)</code> 헤더 정보</td>
+                <td><code>header: {text: "회사코드"}</code></td>
               </tr>
               <tr>
                 <td>styles</td>
                 <td>
-                  <code>(Object)</code> 스타일. 예) _Styles_textc<br />
+                  <code>(Object)</code> 스타일
+                  <br />
                   <br />
                   <dl class="dl-horizontal">
                     <dt>_Styles_text</dt>
@@ -141,11 +146,13 @@ var columns_dg_1 = [
                     <dd>Tree, Left, 트리</dd>
                   </dl>
                 </td>
+                <td><code>styles: _Styles_textc</code></td>
               </tr>
               <tr>
                 <td>editor</td>
                 <td>
-                  <code>(Object)</code> 편집기. 예) _Editor_text
+                  <code>(Object)</code> 편집기
+                  <br />
                   <br />
                   <dl class="dl-horizontal">
                     <dt>_Editor_number</dt>
@@ -174,47 +181,42 @@ var columns_dg_1 = [
                     <dd>Select, Left, 선택</dd>
                   </dl>
                 </td>
+                <td><code>editor: _Editor_text</code></td>
               </tr>
               <tr>
                 <td>lookupDisplay</td>
-                <td>
-                  <code>(String)</code> GetItem에서 값 말고 명칭 읽기 ( true , false ). 예) lookupDisplay: true
-                </td>
+                <td><code>(String)</code> GetItem에서 값 말고 명칭 읽기 ( true , false )</td>
+                <td><code>lookupDisplay: true</code></td>
               </tr>
               <tr>
                 <td>button</td>
-                <td>
-                  <code>(String)</code> 버튼 ( 'action' ). 예) button: "action"
-                </td>
+                <td><code>(String)</code> 버튼 ( 'action' )</td>
+                <td><code>button: "action"</code></td>
               </tr>
               <tr>
                 <td>alwaysShowButton</td>
-                <td>
-                  <code>(Boolean)</code> 버튼 항상 보이기 ( true , false ). 예) alwaysShowButton: true
-                </td>
+                <td><code>(Boolean)</code> 버튼 항상 보이기 ( true , false )</td>
+                <td><code>alwaysShowButton: true</code></td>
               </tr>
               <tr>
                 <td>headerToolTip</td>
-                <td>
-                  <code>(String)</code> 헤더에 마우스 오버되면 설명이 표시됩니다. 예) headerToolTip: "본사 관리팀 승인여부"
-                </td>
+                <td><code>(String)</code> 헤더에 마우스 오버되면 설명이 표시됩니다</td>
+                <td><code>headerToolTip: "본사 관리팀 승인여부"</code></td>
               </tr>
               <tr>
                 <td>merge</td>
-                <td>
-                  <code>(Boolean)</code> 그룹에서 같은 칼럼 안보이게 하기 ( true , false ). 예) merge: true
-                </td>
+                <td><code>(Boolean)</code> 그룹에서 같은 칼럼 안보이게 하기 ( true , false )</td>
+                <td><code>merge: true</code></td>
               </tr>
               <tr>
                 <td>maxLength</td>
-                <td>
-                  <code>(Number)</code> 입력가능 최대자리수. 예) maxLength: 10
-                </td>
+                <td><code>(Number)</code> 입력가능 최대자리수</td>
+                <td><code>maxLength: 10</code></td>
               </tr>
               <tr>
                 <td>footerExpr</td>
                 <td>
-                  <code>(String)</code> Footer 표시 ( SUM , AVG , MIN , MAX , CNT , COUNT , AUTO ). 예) footerExpr: "SUM"
+                  <code>(String)</code> Footer 표시 ( SUM , AVG , MIN , MAX , CNT , COUNT , AUTO )
                   <br />
                   <dl class="dl-horizontal">
                     <dt>SUM</dt>
@@ -234,34 +236,75 @@ var columns_dg_1 = [
                     <dd>String, 텍스트 출력 예) footerExpr: "소계"</dd>
                   </dl>
                 </td>
+                <td><code>footerExpr: "SUM"</code></td>
               </tr>
               <tr>
                 <td>footerAlign</td>
-                <td>
-                  <code>(String)</code> Footer 정렬 ( left , center , right ). 예) footerAlign: "left"
-                </td>
+                <td><code>(String)</code> Footer 정렬 ( left , center , right )</td>
+                <td><code>footerAlign: "left"</code></td>
               </tr>
               <tr>
                 <td>footerStyle</td>
-                <td>
-                  <code>(json)</code> Footer custom CSS style. 예) footerStyle: {"color": "#4F4F4F"}
-                </td>
+                <td><code>(json)</code> Footer custom CSS style</td>
+                <td><code>footerStyle: {"color": "#4F4F4F"}</code></td>
               </tr>
               <tr>
                 <td>footerPre</td>
-                <td>
-                  <code>(String)</code> Footer 앞에 찍힐 글자. 예) footerPre: "총 "
-                </td>
+                <td><code>(String)</code> Footer 앞에 찍힐 글자</td>
+                <td><code>footerPre: "총 "</code></td>
               </tr>
               <tr>
                 <td>footerPost</td>
-                <td>
-                  <code>(String)</code> Footer 뒤에 찍힐 글자. 예) footerPost: " 건"
-                </td>
+                <td><code>(String)</code> Footer 뒤에 찍힐 글자</td>
+                <td><code>footerPost: " 건"</code></td>
               </tr>
             </tbody>
           </table>
 
+          <br />
+          <br />
+          <br />
+
+          <h3>footerExpr 속성의 AUTO 사용하기 예제 </h3>
+
+          <p>
+            행의 값에 따라 계산이 필요한 경우, callback 함수를 정의해서 footer 표시 값을 계산합니다.
+          </p>
+
+          <h4>*.Grid.js</h4>
+          <pre class="language-javascript">
+            <code>
+var columns_dg_1 = [ 
+  {fieldName: 'SLIP_ID'    , width: 100, must_input: 'N', visible: false, readonly: true, editable: false, sortable: true, header: {text: " "}, styles: _Styles_number,  editor: _Editor_number },
+  {fieldName: 'SUPPLY_AMT' , width: 100, must_input: 'N', visible: true , readonly: true, editable: false, sortable: true, header: {text: "공급가"}   , styles: _Styles_number,  editor: _Editor_number, footerExpr: "SUM" },
+  {fieldName: 'VAT_AMT'    , width: 100, must_input: 'N', visible: true , readonly: true, editable: false, sortable: true, header: {text: "부가세"}   , styles: _Styles_number,  editor: _Editor_number, footerExpr: "AUTO" },
+  {fieldName: 'TOTAL_AMT'  , width: 100, must_input: 'N', visible: true , readonly: true, editable: false, sortable: true, header: {text: "합계"}  , styles: _Styles_number,  editor: _Editor_number, footerExpr: "SUM" }
+];
+            </code>
+          </pre>
+
+          <h4>*.js</h4>
+          <pre class="language-javascript">
+            <code>
+<!-- 필요에 따라 함수 위치는 수정하세요 -->
+function xe_GridDataLoad2(a_dg){
+
+  dg_1.SetAutoFooterValue("VAT_AMT", function (i) {
+    var data = dg_3.GetData();
+    var sum  = 0;
+
+    for ( var i = 0, ii = data.length; i < ii; i++ ) {
+      if ( data[i].CHOICE_YN == "Y" ) {
+        sum += Number(data[i].A_VAT_AMT);
+      }
+    }
+
+    return _X.FormatCommaPoint2( sum, 0, false);
+  });
+
+}
+            </code>
+          </pre>
         
 
         </div><!-- .col-md-9 -->
