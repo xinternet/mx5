@@ -25,7 +25,7 @@
     <!-- script type="text/javascript" src="/Mighty/3rd/typeahead/typeahead.bundle.min.js"></script -->
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-md-9">
 
@@ -51,6 +51,9 @@ var columns_dg_1 = [
             </code>
           </pre>
           
+          <br />
+          <br />
+
           <h3>칼럼 속성</h3>
 
           <table class="table table-bordered table-striped ">
@@ -58,24 +61,29 @@ var columns_dg_1 = [
               <tr>
                 <th>속성</th>
                 <th>설명</th>
+                <th>예제</th>
               </tr>              
             </thead>
             <tbody>
               <tr>
                 <td>fieldName</td>
-                <td><code>(string)</code> 필드명. 예) 'USER_NAME'</td>
+                <td><code>(String)</code> 필드명</td>
+                <td><code>fieldName: 'USER_NAME'</code></td>
               </tr>
               <tr>
                 <td>width</td>
-                <td><code>(integer)</code> 너비. 예) 100</td>
+                <td><code>(Number)</code> 너비</td>
+                <td><code>width: 100</code></td>
               </tr>
               <tr>
                 <td>must_input</td>
-                <td><code>(String)</code> 필수입력 여부 ( 'Y' , 'N' ). 예) 'Y'</td>
+                <td><code>(String)</code> 필수입력 여부 ( 'Y' , 'N' )</td>
+                <td><code>must_input: 'Y'</code></td>
               </tr>
               <tr>
                 <td>visible</td>
                 <td><code>(Boolean)</code> 보이기 ( true , false ). 예) true</td>
+                <td><code>must_input: 'Y'</code></td>
               </tr>
               <tr>
                 <td>readonly</td>
@@ -97,6 +105,7 @@ var columns_dg_1 = [
                 <td>styles</td>
                 <td>
                   <code>(Object)</code> 스타일. 예) _Styles_textc<br />
+                  <br />
                   <dl class="dl-horizontal">
                     <dt>_Styles_text</dt>
                     <dd>Text, Left, 텍스트</dd>
@@ -137,6 +146,7 @@ var columns_dg_1 = [
                 <td>editor</td>
                 <td>
                   <code>(Object)</code> 편집기. 예) _Editor_text
+                  <br />
                   <dl class="dl-horizontal">
                     <dt>_Editor_number</dt>
                     <dd>Number, Right, 숫자</dd>
@@ -168,31 +178,85 @@ var columns_dg_1 = [
               <tr>
                 <td>lookupDisplay</td>
                 <td>
-                  <code>(String)</code> GetItem에서 값 말고 명칭 읽기 ( true , false ). 예) true
+                  <code>(String)</code> GetItem에서 값 말고 명칭 읽기 ( true , false ). 예) lookupDisplay: true
                 </td>
               </tr>
               <tr>
                 <td>button</td>
                 <td>
-                  <code>(String)</code> 버튼 ( 'action' ). 예) "action"
+                  <code>(String)</code> 버튼 ( 'action' ). 예) button: "action"
                 </td>
               </tr>
               <tr>
                 <td>alwaysShowButton</td>
                 <td>
-                  <code>(Boolean)</code> 버튼 항상 보이기 ( true , false ). 예) true
+                  <code>(Boolean)</code> 버튼 항상 보이기 ( true , false ). 예) alwaysShowButton: true
+                </td>
+              </tr>
+              <tr>
+                <td>headerToolTip</td>
+                <td>
+                  <code>(String)</code> 헤더에 마우스 오버되면 설명이 표시됩니다. 예) headerToolTip: "본사 관리팀 승인여부"
                 </td>
               </tr>
               <tr>
                 <td>merge</td>
                 <td>
-                  <code>(Boolean)</code> 그룹에서 같은 칼럼 안보이게 하기 ( true , false ). 예) true
+                  <code>(Boolean)</code> 그룹에서 같은 칼럼 안보이게 하기 ( true , false ). 예) merge: true
+                </td>
+              </tr>
+              <tr>
+                <td>maxLength</td>
+                <td>
+                  <code>(Number)</code> 입력가능 최대자리수. 예) maxLength: 10
                 </td>
               </tr>
               <tr>
                 <td>footerExpr</td>
                 <td>
-                  <code>(String)</code> 버튼 항상 보이기 ( true , false ). 예) true
+                  <code>(String)</code> Footer 표시 ( SUM , AVG , MIN , MAX , CNT , COUNT , AUTO ). 예) footerExpr: "SUM"
+                  <br />
+                  <dl class="dl-horizontal">
+                    <dt>SUM</dt>
+                    <dd>Number, 합계</dd>
+                    <dt>AVG</dt>
+                    <dd>Number, 평균</dd>
+                    <dt>MIN</dt>
+                    <dd>Number, 최소값</dd>
+                    <dt>MAX</dt>
+                    <dd>Number, 최대값</dd>
+                    <dt>CNT, COUNT</dt>
+                    <dd>Number, 행의 개수</dd>
+                    <dt>AUTO</dt>
+                    <dd>Value, Callback 함수 리턴값 </dd>
+                    
+                    <dt>그외 텍스트</dt>
+                    <dd>String, 텍스트 출력 예) footerExpr: "소계"</dd>
+                  </dl>
+                </td>
+              </tr>
+              <tr>
+                <td>footerAlign</td>
+                <td>
+                  <code>(String)</code> Footer 정렬 ( left , center , right ). 예) footerAlign: "left"
+                </td>
+              </tr>
+              <tr>
+                <td>footerStyle</td>
+                <td>
+                  <code>(json)</code> Footer custom CSS style. 예) footerStyle: {"color": "#4F4F4F"}
+                </td>
+              </tr>
+              <tr>
+                <td>footerPre</td>
+                <td>
+                  <code>(String)</code> Footer 앞에 찍힐 글자. 예) footerPre: "총 "
+                </td>
+              </tr>
+              <tr>
+                <td>footerPost</td>
+                <td>
+                  <code>(String)</code> Footer 뒤에 찍힐 글자. 예) footerPost: " 건"
                 </td>
               </tr>
             </tbody>
@@ -200,8 +264,8 @@ var columns_dg_1 = [
 
         
 
-      </div><!-- .col-md-9 -->
-    </div><!-- .row -->
-  </div><!-- .container -->
-</body>
+        </div><!-- .col-md-9 -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </body>
 </html>
