@@ -4,6 +4,17 @@ html, body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+html, body, div, span, ul, li, ol, p, img, fieldset, legend, form, input, select, textarea, object, button, a, table, th, td, dl, dt, dd, h1, h2, h3, h4, h5 {
+  margin: initial;
+  padding: initial;
+  font-size: initial;
+}
+
+li {
+  display: initial;
+  text-align: initial;
+}
+
 .detail_box .has_button button {
   background: url('/mx5/dev/Theme/images/btn/btn_find.gif') no-repeat;
 }
