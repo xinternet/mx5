@@ -503,7 +503,7 @@
             <div class="detail_input_bg w20 noborder text_center">
               ~
             </div>
-            <div class="detail_input_bg w100">
+            <div class="detail_input_bg w100 noborder">
               <input id="TO_DATE" type="text" class="detail_date">
             </div>
 
@@ -529,10 +529,10 @@
         &lt;div class="detail_input_bg w100"&gt;
           &lt;input id="FROM_DATE" type="text" style="detail_date" &gt;
         &lt;/div&gt;
-        <div class="detail_input_bg w20 noborder text_center">
+        &lt;div class="detail_input_bg w20 noborder text_center"&gt;
           ~
-        </div>
-        &lt;div class="detail_input_bg w100"&gt;
+        &lt;/div&gt;
+        &lt;div class="detail_input_bg w100 noborder"&gt;
           &lt;input id="TO_DATE" type="text" style="detail_date" &gt;
         &lt;/div&gt;
 
@@ -545,7 +545,54 @@
 </pre>
 
 
-단위 추가
+
+
+      <h4>Text 추가(단위)</h4>
+      <div class="wrap-ff" style="width: 500px;">
+        <div id="freeform" class="detail_box ver2" >
+          <div class="detail_row detail_row_bb">
+
+            <label class="detail_label w100" for="WORK_MM">근무월</label>
+            <div class="detail_input_bg w150">
+              <input id="WORK_MM" type="text" >
+            </div>
+            <div class="detail_input_bg w30 noborder">
+              개월
+            </div>
+
+            <div class="row-closing"></div>
+
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+      <p>
+        텍스트를 넣기 위한 <code>div.detail_input_bg</code> 를 추가하고, class에 <code>noborder</code>와 width class명을 추가합니다. <br />
+        이때, 주의할 점은 실제 텍스트의 width 보다 작게 잡을 경우, 전체적으로 배열이 잘 안맞을 수 있습니다.
+      </p>
+
+<pre class="language-markup">
+  <code>
+
+    &lt;div id="freeform" class="detail_box ver2"&gt;
+      &lt;div class="detail_row detail_row_bb"&gt;
+
+        &lt;label class="detail_label w100" for="WORK_MM"&gt;근무월&lt;/label&gt;
+        &lt;div class="detail_input_bg w150"&gt;
+          &lt;input id="WORK_MM" type="text" &gt;
+        &lt;/div&gt;
+        &lt;div class="detail_input_bg w30 noborder"&gt;
+          개월
+        &lt;/div&gt;
+
+        &lt;div class="row-closing"&gt;&lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  </code>
+</pre>
 
 
 체크박스
