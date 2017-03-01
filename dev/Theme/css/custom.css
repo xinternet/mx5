@@ -9,7 +9,7 @@ html, body, div, span, ul, li, ol, p, img, fieldset, legend, form, input, select
   color: #333;
 }
 
-* {
+ul, li, ol {
   margin: initial;
   padding: initial;
 }
