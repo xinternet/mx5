@@ -17,6 +17,10 @@ h2 {
   margin-top: 40px;
 }
 
+h4 {
+  margin-top: 30px;
+}
+
 .wrap-ff {
   font-family: 'Nanum Gothic', 'NanumGothic', 'Malgun Gothic', Dotum, Gulim, verdana, arial, sans-serif !important;
   font-size: 12px;
