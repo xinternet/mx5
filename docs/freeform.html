@@ -235,13 +235,13 @@
 
           <div class="row-closing"></div>
         </div>
+        <div class="clearfix"></div>
       </div>
 
-      <div>
-        <p>
-          마지막 칼럼의 <code>div.detail_input_bg</code>에 width를 지정하지 않으면 freeform width에 자동으로 맞춥니다.<br />
-        </p>
-      </div>
+      <p>
+        마지막 칼럼의 <code>div.detail_input_bg</code>에 width를 지정하지 않으면 freeform width에 자동으로 맞춥니다.<br />
+      </p>
+
 
 <pre class="language-markup">
   <code>
@@ -290,11 +290,9 @@
         <div class="clearfix"></div>
       </div>
 
-      <div>
-        <p>
-          마지막 칼럼의 <code>div.detail_input_bg</code>에 width를 고정하고, 뒤에 빈칼럼 <code>&lt;div class="row-closing"&gt;&lt;/div&gt;</code><br />
-        </p>
-      </div>
+      <p>
+        마지막 칼럼의 <code>div.detail_input_bg</code>에 width를 고정하고, 뒤에 빈칼럼 <code>&lt;div class="row-closing"&gt;&lt;/div&gt;</code><br />
+      </p>
 
 <pre class="language-markup">
   <code>
@@ -323,162 +321,5 @@
 
 
 
-          <h2>
-            Horizontal
-          </h2>
-          <hr>
-          <p>
-            <code>.x5-w-(number)</code> 를 적용한 요소는 width 가 (number)px 로 고정됩니다. (number)는 5~1000까지 5px단위로 사용 가능합니다. 예) .x5-w-35 (O), .x5-w-32 (X)<br /> 
-            <code>.x5-w-rate-(number)</code> 를 적용한 요소는 parent width에 (number)% 로 width가 적용되고, window resize에 따라 같은 비율로 width가 변경됩니다. (number)는 1~100까지 사용 가능합니다. 예) .x5-w-rate-35 (O), .x5-w-rate-32 (O)<br />
-            <code>.x5-w-fill</code> 를 적용한 요소는 parent 의 남은 width를 채웁니다. <code>.x5-w-fill</code> 요소가 여러개일 경우, 남은 공간을 비율로 나눠서 채웁니다.(안에 내용이 들어가야 합니다.)<br />
-            <code>.x5-col-(number)</code> 한 row를 12column으로 나눴을 때, 비율로 동작합니다. (number)는 1~12까지 정수 사용
-          </p>
-          <hr>
-          <h4>left 고정</h4>
-<pre class="language-markup">
-  <code>
-  &lt;div class="<span class="text-danger">x5-w-500</span>"&gt;
-    ...
-  &lt;/div&gt;
-
-  &lt;div class="<span class="text-danger">x5-w-fill</span>"&gt;
-    ...
-  &lt;/div&gt;
-  </code>
-</pre>
-
-          <h4>right 고정</h4>
-<pre class="language-markup">
-  <code>
-  &lt;div class="<span class="text-danger">x5-w-fill</span>"&gt;
-    ...
-  &lt;/div&gt;
-
-  &lt;div class="<span class="text-danger">x5-w-300</span>"&gt;
-    ...
-  &lt;/div&gt;
-  </code>
-</pre>
-
-          <h4>비율 3등분</h4>
-<pre class="language-markup">
-  <code>
-  &lt;div class="<span class="text-danger">x5-col-4</span>"&gt;
-    ...
-  &lt;/div&gt;
-
-  &lt;div class="<span class="text-danger">x5-col-4</span>"&gt;
-    ...
-  &lt;/div&gt;
-
-  &lt;div class="<span class="text-danger">x5-col-4</span>"&gt;
-    ...
-  &lt;/div&gt;
-  </code>
-</pre>
-
-
-
-          <h2 id="freeform">
-            FreeForm
-          </h2>
-          <hr>
-          <p>
-            <code>.x5-ff</code> 의 하위 요소에 적용됩니다.<br /> 
-            <code>.x5-row</code> row를 구분합니다. <br /> 
-            <code>.x5-w-(number)</code> 를 적용한 요소는 width 가 (number)px 로 고정됩니다.<br /> 
-            <code>.x5-w-rate-(number)</code> 를 적용한 요소는 parent width에 (number)% 로 width가 적용되고, window resize에 따라 같은 비율로 width가 변경됩니다.<br />
-            <code>&lt;label&gt;&lt;/label&gt;</code> form control의 제목일 경우, lable 태그를 사용합니다.
-          </p>
-          <hr>
-          <h4>고정폭</h4>
-          <p>
-            width를 비율로 고정합니다. <code>.x5-w-reate-(number)</code> 또는 <code>.x5-col-(number)</code> 를 사용합니다.
-          </p>
-<pre class="language-markup">
-  <code>
-  &lt;div class="<span class="text-danger">x5-ff</span>"&gt;
-    &lt;div class="<span class="text-danger">x5-row</span>"&gt;
-      &lt;label for="USER_ID" class="<span class="text-danger">x5-w-rate-20 text-right</span>"&gt;사용자 아이디 &lt;/label&gt;
-      &lt;div class="x5-w-rate-30"&gt;
-        &lt;input id='USER_ID' type='text' class='form-control input-sm' maxLength='9'&gt;
-      &lt;/div&gt;
-      &lt;label for="USER_NAME" class="<span class="text-danger">x5-w-rate-20 text-right</span>"&gt;사용자 이름 &lt;/label&gt;
-      &lt;div class="x5-w-rate-30"&gt;
-        &lt;input id='USER_NAME' type='text' class='form-control input-sm' maxLength='9'&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .x5-row --&gt;
-
-    &lt;div class="<span class="text-danger">x5-row</span>"&gt;
-      &lt;label for="USER_ID" class="<span class="text-danger">x5-col-2 text-right</span>"&gt;사용자 아이디 &lt;/label&gt;
-      &lt;div class="x5-col-4"&gt;
-        &lt;input id='USER_ID' type='text' class='form-control input-sm' maxLength='9'&gt;
-      &lt;/div&gt;
-      &lt;label for="USER_NAME" class="<span class="text-danger">x5-col-2 text-right</span>"&gt;사용자 이름 &lt;/label&gt;
-      &lt;div class="x5-col-4"&gt;
-        &lt;input id='USER_NAME' type='text' class='form-control input-sm' maxLength='9'&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .x5-row --&gt;
-  &lt;/div&gt;&lt;!-- .x5-ff --&gt;
-  </code>
-
-</pre>
-          
-          <h4>가변폭</h4>
-          <p>
-            freeform의 label은 고정 width를 갖고, 오른쪽만 resize될 경우 사용합니다. table 태그를 사용합니다. 고정할 table td의 요소에 <code>.x5-w-(number)</code> 를 사용합니다. resize될 td는 <code>.x5-w-rate-100</code> 을 사용합니다. 아직 여러칼럼에선 동작하지 않습니다.
-          </p>
-
-<pre class="language-markup">
-  <code>
-  &lt;div class="<span class="text-danger">x5-ff</span>"&gt;
-    &lt;table&gt;
-      &lt;tr&gt;
-        &lt;td&gt;
-
-        &lt;/td&gt;
-      &lt;/tr&gt;
-
-
-
-
-
-      &lt;label for="USER_ID" class="<span class="text-danger">x5-w-rate-20 text-right</span>"&gt;사용자 아이디 &lt;/label&gt;
-      &lt;div class="x5-w-rate-30"&gt;
-        &lt;input id='USER_ID' type='text' class='form-control input-sm' maxLength='9'&gt;
-      &lt;/div&gt;
-      &lt;label for="USER_NAME" class="<span class="text-danger">x5-w-rate-20 text-right</span>"&gt;사용자 이름 &lt;/label&gt;
-      &lt;div class="x5-w-rate-30"&gt;
-        &lt;input id='USER_NAME' type='text' class='form-control input-sm' maxLength='9'&gt;
-      &lt;/div&gt;
-
-
-    &lt;/table&gt;
-
-    &lt;div class="<span class="text-danger">x5-row</span>"&gt;
-      &lt;label for="USER_ID" class="<span class="text-danger">x5-col-2 text-right</span>"&gt;사용자 아이디 &lt;/label&gt;
-      &lt;div class="x5-col-4"&gt;
-        &lt;input id='USER_ID' type='text' class='form-control input-sm' maxLength='9'&gt;
-      &lt;/div&gt;
-      &lt;label for="USER_NAME" class="<span class="text-danger">x5-col-2 text-right</span>"&gt;사용자 이름 &lt;/label&gt;
-      &lt;div class="x5-col-4"&gt;
-        &lt;input id='USER_NAME' type='text' class='form-control input-sm' maxLength='9'&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .x5-row --&gt;
-  &lt;/div&gt;&lt;!-- .x5-ff --&gt;
-  </code>
-
-</pre>
-
-          <h2 id="etc">
-            Etc
-          </h2>
-          <hr>
-
-          <h3>.x5-inner</h3>
-          <p>
-            padding: 3px 의 여백을 추가합니다. 그리드를 제외한 곳에서 사용합니다.
-          </p>
-    </div>
   </body>
 </html>
