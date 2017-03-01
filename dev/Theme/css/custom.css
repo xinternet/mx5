@@ -17,10 +17,6 @@ h2 {
   margin-top: 40px;
 }
 
-.detail_box .has_button button {
-  background: url('/mx5/dev/Theme/images/btn/btn_find.gif') no-repeat;
-}
-
 .wrap_ff {
   font-family: 'Nanum Gothic', 'NanumGothic', 'Malgun Gothic', Dotum, Gulim, verdana, arial, sans-serif !important;
   font-size: 12px;
@@ -32,4 +28,13 @@ h2 {
 
 .wrap-ff label {
   font-weight: 400;
+}
+
+.wrap-ff .detail_box .has_button button {
+  background: url('/mx5/dev/Theme/images/btn/btn_find.gif') no-repeat;
+}
+
+.wrap-ff .has_title label.sub_title, 
+.wrap-ff .detail_box.ver2 label.sub_title {
+  background: url(/mx5/dev/Theme/images/btn/tit_icon_pop.gif) no-repeat left 8px;
 }
