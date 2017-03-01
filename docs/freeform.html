@@ -30,145 +30,145 @@
   <body>
     <div class="container">
 
-          <h1 id="layout">
-            Freeform
-          </h1>
-          
-          <div class="panel panel-default">
-            <div class="panel-body">
-              MDI의 안쪽 화면을 디자인 하는 방법을 안내합니다. 
+      <h1 id="layout">
+        Freeform (ver2)
+      </h1>
+      
+      <div class="panel panel-default">
+        <div class="panel-body">
+          Grid와 Share 하는 Freeform(ver2)을 만드는 방법을 안내합니다.<br />
+          mighty-2.0.2.css 이상에서 추가되었습니다.
+        </div>
+      </div>
+
+      <h2>
+        시작하기
+      </h2>
+      <hr>
+      <p>
+        Freeform을 쉽고 빠르게 만들기 위해 참고하세요.
+      </p>
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <ul>
+            <li>html태그 내에 Inline Style<code>style="width: 100px"</code>을 가급적 사용하지 않습니다.</li>
+            <li>html태그 내에 Inline Style<code>style="width: 100px"</code>을 가급적 사용하지 않습니다.</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="wrap-ff" style="width: 970px;">
+        <div id="freeform" class="detail_box ver2 has_title" >
+          <label class="sub_title">수주계획</label>
+
+          <div class="detail_row">
+            <label class="detail_label w110">공사명</label>
+            <div class="detail_input_bg w100">
+              <input id="EST_CODE" type="text" class="tac" >
+            </div>
+            <div class="detail_input_bg w276 noborder has_button">
+              <input id="EST_NAME" type="text" >
+              <button id="btn_Estfind" class="search_find_img">
+            </button></div>
+            <label class="detail_label w110">건설사</label>
+            <div class="detail_input_bg w100">
+              <input id="CNST_CODE" type="text" class="tac" >
+            </div>
+            <div class="detail_input_bg w276 noborder has_button">
+              <input id="CNST_NAME" type="text" >
+              <button id="btn_Custfind" class="search_find_img">
+            </button></div>
+            <div class="detail_input_bg noborder">
             </div>
           </div>
-
-          <h2>
-            시작하기
-          </h2>
-          <hr>
-          <p>
-            bootstrap3 이 적용되고 ie8이 가능한 Theme (bs3 기반) 에 해당됩니다.
-          </p>
-
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <h4>적용된 Theme</h4>
-                
-              <ul>
-                <li>cop</li>
-              </ul>
+          <div class="detail_row">
+            <label class="detail_label w110">공사유형</label>
+            <div class="detail_input_bg w140">
+              <select id="CONST_DIV" ><option value="000">표준공종</option><option value="101">아파트</option><option value="102">주상복합</option><option value="103">고급주택</option><option value="104">타운하우스</option><option value="105">초고층아파트</option><option value="106">호텔</option><option value="107">콘도</option><option value="108">연수원</option><option value="109">기숙사</option><option value="110">오피스</option><option value="111">초고층오피스</option><option value="112">청사</option><option value="113">역사</option><option value="114">공항</option><option value="115">쇼핑몰</option><option value="116">유통</option><option value="117">극장</option><option value="118">미술관</option><option value="119">문화회관</option><option value="120">전시장</option><option value="121">일반공장</option><option value="122">아파트형 공장 </option><option value="123">반도체</option><option value="124">학교</option><option value="125">연구소</option><option value="126">병원</option><option value="127">골프장</option><option value="128">운동장</option><option value="129">체육관</option><option value="130">스키장</option><option value="131">워터파크</option><option value="132">놀이동산</option><option value="133">군사</option><option value="134">FED </option><option value="135">항만</option><option value="136">하수처리장</option><option value="137">소각로</option><option value="138">열배관관로</option><option value="139">가스관로</option><option value="140">화학공장</option><option value="141">관로공사</option><option value="142">가스저장시설</option><option value="143">발전설비</option><option value="144">원자력설비</option><option value="145">해외일반설비</option><option value="146">유류저장시설</option><option value="147">이송설비</option><option value="148">산소공장</option><option value="150">GMP</option><option value="164">IT공사</option></select>
             </div>
+
+            <label class="detail_label w110">예상수주시기</label>
+            <div class="detail_input_bg w60">
+              <input id="YY" type="text" class="tac" >
+            </div>
+            <div class="detail_input_bg w10 noborder">
+              년 
+            </div>
+            <div class="detail_input_bg w55 noborder">
+              <select id="MM" ><option value="01">1월</option><option value="02">2월</option><option value="03">3월</option><option value="04">4월</option><option value="05">5월</option><option value="06">6월</option><option value="07">7월</option><option value="08">8월</option><option value="09">9월</option><option value="10">10월</option><option value="11">11월</option><option value="12">12월</option></select>
+            </div>
+            <div class="detail_input_bg  noborder"> 
+            </div>  
+            <label class="detail_label w110">공사예상금액</label>
+            <div class="detail_input_bg w140">
+              <input id="EXPT_AMT" type="text" class="detail_amt"  style="text-align: right;">
+            </div>
+            <label class="detail_label w110">수주금액</label>
+            <div class="detail_input_bg">
+              <input id="ACHV_AMT" type="text" class="detail_amt"  style="text-align: right;">
+            </div>
+            
           </div>
 
-
-          <div class="wrap-ff" style="width: 970px;">
-            <div id="freeform" class="detail_box ver2 has_title" >
-              <label class="sub_title">수주계획</label>
-
-              <div class="detail_row">
-                <label class="detail_label w110">공사명</label>
-                <div class="detail_input_bg w100">
-                  <input id="EST_CODE" type="text" class="tac" >
-                </div>
-                <div class="detail_input_bg w276 noborder has_button">
-                  <input id="EST_NAME" type="text" >
-                  <button id="btn_Estfind" class="search_find_img">
+          <div class="detail_row detail_row_bb">
+            <label class="detail_label w110">PM성명</label>
+            <div class="detail_input_bg w140 has_button">
+                  <input id="EMP_NAME" type="text" >
+                  <button id="btn_pmfind" class="search_find_img">
                 </button></div>
-                <label class="detail_label w110">건설사</label>
-                <div class="detail_input_bg w100">
-                  <input id="CNST_CODE" type="text" class="tac" >
-                </div>
-                <div class="detail_input_bg w276 noborder has_button">
-                  <input id="CNST_NAME" type="text" >
-                  <button id="btn_Custfind" class="search_find_img">
-                </button></div>
-                <div class="detail_input_bg noborder">
-                </div>
-              </div>
-              <div class="detail_row">
-                <label class="detail_label w110">공사유형</label>
-                <div class="detail_input_bg w140">
-                  <select id="CONST_DIV" ><option value="000">표준공종</option><option value="101">아파트</option><option value="102">주상복합</option><option value="103">고급주택</option><option value="104">타운하우스</option><option value="105">초고층아파트</option><option value="106">호텔</option><option value="107">콘도</option><option value="108">연수원</option><option value="109">기숙사</option><option value="110">오피스</option><option value="111">초고층오피스</option><option value="112">청사</option><option value="113">역사</option><option value="114">공항</option><option value="115">쇼핑몰</option><option value="116">유통</option><option value="117">극장</option><option value="118">미술관</option><option value="119">문화회관</option><option value="120">전시장</option><option value="121">일반공장</option><option value="122">아파트형 공장 </option><option value="123">반도체</option><option value="124">학교</option><option value="125">연구소</option><option value="126">병원</option><option value="127">골프장</option><option value="128">운동장</option><option value="129">체육관</option><option value="130">스키장</option><option value="131">워터파크</option><option value="132">놀이동산</option><option value="133">군사</option><option value="134">FED </option><option value="135">항만</option><option value="136">하수처리장</option><option value="137">소각로</option><option value="138">열배관관로</option><option value="139">가스관로</option><option value="140">화학공장</option><option value="141">관로공사</option><option value="142">가스저장시설</option><option value="143">발전설비</option><option value="144">원자력설비</option><option value="145">해외일반설비</option><option value="146">유류저장시설</option><option value="147">이송설비</option><option value="148">산소공장</option><option value="150">GMP</option><option value="164">IT공사</option></select>
-                </div>
-
-                <label class="detail_label w110">예상수주시기</label>
-                <div class="detail_input_bg w60">
-                  <input id="YY" type="text" class="tac" >
-                </div>
-                <div class="detail_input_bg w10 noborder">
-                  년 
-                </div>
-                <div class="detail_input_bg w55 noborder">
-                  <select id="MM" ><option value="01">1월</option><option value="02">2월</option><option value="03">3월</option><option value="04">4월</option><option value="05">5월</option><option value="06">6월</option><option value="07">7월</option><option value="08">8월</option><option value="09">9월</option><option value="10">10월</option><option value="11">11월</option><option value="12">12월</option></select>
-                </div>
-                <div class="detail_input_bg  noborder"> 
-                </div>  
-                <label class="detail_label w110">공사예상금액</label>
-                <div class="detail_input_bg w140">
-                  <input id="EXPT_AMT" type="text" class="detail_amt"  style="text-align: right;">
-                </div>
-                <label class="detail_label w110">수주금액</label>
-                <div class="detail_input_bg">
-                  <input id="ACHV_AMT" type="text" class="detail_amt"  style="text-align: right;">
-                </div>
-                
-              </div>
-
-              <div class="detail_row detail_row_bb">
-                <label class="detail_label w110">PM성명</label>
-                <div class="detail_input_bg w140 has_button">
-                      <input id="EMP_NAME" type="text" >
-                      <button id="btn_pmfind" class="search_find_img">
-                    </button></div>
-                <label class="detail_label w110">수주구분</label>
-                <div class="detail_input_bg w140">      
-                  <select id="RECV_DIV" ><option value="1">신규수주</option><option value="2">설계변경</option></select>
-                </div>
-                <label class="detail_label w110">진행상황</label>
-                <div class="detail_input_bg">
-                  <select id="STATUS_DIV" ><option value="1">종료</option><option value="2">준비</option><option value="3">수주계획</option><option value="4">수주</option><option value="5">입찰참여</option><option value="6">미수주</option></select>
-                </div>
-            <!--    <label class='detail_label w110'>수주목표금액</label>
-                <div class='detail_input_bg w140'>
-                  <input id='GOAL_AMT'  type='text' class='detail_amt'>
-                </div>
-                <label class='detail_label w110'>금년도공사금액</label>
-                <div class='detail_input_bg'>
-                  <input id='THIS_AMT' type='text' class='detail_amt'>
-                </div> -->
-              </div>
-
-            <!--  <div class='detail_row detail_row_bb'>
-
-                <label class='detail_label w110'>사업부</label>
-                <div class='detail_input_bg w140'>
-                  <select id="ENT_DEPT" ></select>
-                </div>
-                <label class='detail_label w110'>진행상황</label>
-                <div class='detail_input_bg w140'>
-                  <select id='STATUS_DIV' ></select>
-                </div>
-                <label class='detail_label w110'>수주계획금액</label>
-                <div class='detail_input_bg w140'>
-                  <input id='PLAN_AMT'  type='text' class='detail_amt'>
-                </div>
-                <label class='detail_label w110'>내년도공사금액</label>
-                <div class='detail_input_bg '>
-                  <input id='NEXT_AMT'  type='text' class='detail_amt'>
-                </div>    
-              </div> -->
+            <label class="detail_label w110">수주구분</label>
+            <div class="detail_input_bg w140">      
+              <select id="RECV_DIV" ><option value="1">신규수주</option><option value="2">설계변경</option></select>
             </div>
+            <label class="detail_label w110">진행상황</label>
+            <div class="detail_input_bg">
+              <select id="STATUS_DIV" ><option value="1">종료</option><option value="2">준비</option><option value="3">수주계획</option><option value="4">수주</option><option value="5">입찰참여</option><option value="6">미수주</option></select>
+            </div>
+        <!--    <label class='detail_label w110'>수주목표금액</label>
+            <div class='detail_input_bg w140'>
+              <input id='GOAL_AMT'  type='text' class='detail_amt'>
+            </div>
+            <label class='detail_label w110'>금년도공사금액</label>
+            <div class='detail_input_bg'>
+              <input id='THIS_AMT' type='text' class='detail_amt'>
+            </div> -->
           </div>
 
+        <!--  <div class='detail_row detail_row_bb'>
 
-          <h2>
-            Vertical
-          </h2>
-          <hr>
-          <p>
-            <code>.x5-row</code> 를 적용하면 세로 높이는 안에 들어있는 요소의 height에 따라 자동으로 고정됩니다.<br />
-            <code>.x5-h-(number)</code> 를 적용한 요소는 height가 (number)px 로 고정됩니다. (number)는 5~1000까지 5px단위로 사용 가능합니다. 예) .x5-h-35 (O), .x5-h-32 (X) <br /> 
-            <code>.x5-h-rate-(number)</code> 를 적용한 요소는 Parent height의 (number)% 로 height가 적용되고, window resize에 따라 같은 비율로 height가 변경됩니다. (number)는 1~100까지 사용 가능합니다. 예) .x5-h-rate-35 (O), .x5-h-rate-32 (O)<br />
-            <code>.x5-h-fill</code> 를 적용한 요소는 parent의 남은 height를 채웁니다. window resize에 따라 높이가 자동 변경됩니다. <code>.x5-h-fill</code> 요소가 여러개일 경우, 남은 공간을 비율로 나눠서 채웁니다. ie8에 적용하기 위해서 <code>.x5-h-fill</code>는 자바스크립트로 높이를 계산합니다. 사용하지 않은 레이아웃이 더 빠르게 동작할 가능성이 있습니다.
-          </p>
+            <label class='detail_label w110'>사업부</label>
+            <div class='detail_input_bg w140'>
+              <select id="ENT_DEPT" ></select>
+            </div>
+            <label class='detail_label w110'>진행상황</label>
+            <div class='detail_input_bg w140'>
+              <select id='STATUS_DIV' ></select>
+            </div>
+            <label class='detail_label w110'>수주계획금액</label>
+            <div class='detail_input_bg w140'>
+              <input id='PLAN_AMT'  type='text' class='detail_amt'>
+            </div>
+            <label class='detail_label w110'>내년도공사금액</label>
+            <div class='detail_input_bg '>
+              <input id='NEXT_AMT'  type='text' class='detail_amt'>
+            </div>    
+          </div> -->
+        </div>
+      </div>
+
+
+      <h2>
+        Vertical
+      </h2>
+      <hr>
+      <p>
+        <code>.x5-row</code> 를 적용하면 세로 높이는 안에 들어있는 요소의 height에 따라 자동으로 고정됩니다.<br />
+        <code>.x5-h-(number)</code> 를 적용한 요소는 height가 (number)px 로 고정됩니다. (number)는 5~1000까지 5px단위로 사용 가능합니다. 예) .x5-h-35 (O), .x5-h-32 (X) <br /> 
+        <code>.x5-h-rate-(number)</code> 를 적용한 요소는 Parent height의 (number)% 로 height가 적용되고, window resize에 따라 같은 비율로 height가 변경됩니다. (number)는 1~100까지 사용 가능합니다. 예) .x5-h-rate-35 (O), .x5-h-rate-32 (O)<br />
+        <code>.x5-h-fill</code> 를 적용한 요소는 parent의 남은 height를 채웁니다. window resize에 따라 높이가 자동 변경됩니다. <code>.x5-h-fill</code> 요소가 여러개일 경우, 남은 공간을 비율로 나눠서 채웁니다. ie8에 적용하기 위해서 <code>.x5-h-fill</code>는 자바스크립트로 높이를 계산합니다. 사용하지 않은 레이아웃이 더 빠르게 동작할 가능성이 있습니다.
+      </p>
 
 <pre class="language-markup">
   <code>

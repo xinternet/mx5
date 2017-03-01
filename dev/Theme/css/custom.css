@@ -13,6 +13,10 @@ ul, ol {
   padding-left: 40px;
 }
 
+h2 {
+  margin-top: 40px;
+}
+
 .detail_box .has_button button {
   background: url('/mx5/dev/Theme/images/btn/btn_find.gif') no-repeat;
 }
@@ -20,4 +24,12 @@ ul, ol {
 .wrap_ff {
   font-family: 'Nanum Gothic', 'NanumGothic', 'Malgun Gothic', Dotum, Gulim, verdana, arial, sans-serif !important;
   font-size: 12px;
+}
+
+.wrap-ff ul, .wrap-ff ol {
+  padding-left: 0;
+}
+
+.wrap-ff label {
+  font-weight: 400;
 }
