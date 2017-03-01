@@ -127,11 +127,15 @@
       </h2>
       <hr>
       <p>
-        Freeform을 쉽고 빠르게 만들기 위해 참고하세요.
+        Freeform의 특징 및 참고할 내용
       </p>
 
       <div class="panel panel-default">
         <div class="panel-body">
+          <ul>
+            <li>Semantic : 태그 변경. 항목명의 경우 html Tag를 div => label 로 변경</li>
+            <li>width 100% Freeform 생성</li>
+          </ul>
           <ul>
             <li>html태그 내에 Inline Style (<code>style="width: 100px"</code>)을 가급적 사용하지 않습니다. 모양이 특이한 경우 적절하게 사용하세요.</li>
             <li>복잡한 모양은 만들기 어렵습니다. 힘들게 똑같이 만드는 것 보다 만들기 쉬운 형태로 다시 디자인 하세요.</li>
@@ -170,6 +174,70 @@
     &lt;/div&gt;
 
   &lt;/div&gt;
+
+  </code>
+</pre>
+
+
+
+
+
+      <h2>
+        Freeform Title 넣기
+      </h2>
+      <hr>
+      <div class="wrap-ff" style="width: 700px;">
+        <div id="freeform" class="detail_box ver2 has_title" >
+          <label class="sub_title">회사정보</label>
+
+          <div class="detail_row detail_row_bb">
+
+            <label class="detail_label w100" for="COMP_NAME">회사명</label>
+            <div class="detail_input_bg w140">
+              <input id="COMP_NAME" type="text" >
+            </div>
+
+            <label class="detail_label w100" for="CEO_NAME">대표</label>
+            <div class="detail_input_bg">
+              <input id="CEO_NAME" type="text" >
+            </div>
+
+          </div>
+
+          <div class="row-closing"></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+      <p>
+        <code>div.detail_box</code>의 class에 <code>has_title</code>를 추가하고, <br />
+        <code>&lt;label class="sub_title"&gt;회사정보&lt;/label&gt;</code>를 추가합니다.
+      </p>
+
+<pre class="language-markup">
+  <code>
+    &lt;div id="freeform" class="detail_box ver2 has_title"&gt;
+      &lt;label class="sub_title"&gt;회사정보&lt;/label&gt;
+
+      &lt;div class="detail_row"&gt;
+
+        &lt;label class="detail_label w100" for="COMP_NAME"&gt;회사명&lt;/label&gt;
+        &lt;div class="detail_input_bg w140"&gt;
+          &lt;input id="COMP_NAME" type="text" &gt;
+        &lt;/div&gt;
+
+        &lt;label class="detail_label w100" for="CEO_NAME"&gt;대표&lt;/label&gt;
+        &lt;div class="detail_input_bg w140"&gt;
+          &lt;input id="CEO_NAME" type="text" &gt;
+        &lt;/div&gt;
+
+        &lt;label class="detail_label w100" for="TEL"&gt;전화번호&lt;/label&gt;
+        &lt;div class="detail_input_bg"&gt;
+          &lt;input id="COMP_NAME" type="text" &gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
 
   </code>
 </pre>
