@@ -390,5 +390,111 @@
 
 
 
+
+
+      <h2>
+        스타일 변경
+      </h2>
+      <hr>
+
+      <p>
+        기간이나, 단위, 검색버튼과 같은 특이한 스타일을 지정합니다.
+      </p>
+
+
+      <h4>검색버튼 추가</h4>
+      <div class="wrap-ff" style="width: 500px;">
+        <div id="freeform" class="detail_box ver2" >
+          <div class="detail_row detail_row_bb">
+
+            <label class="detail_label w100" for="COMP_NAME">회사명</label>
+            <div class="detail_input_bg has_button">
+              <input id="COMP_NAME" type="text" >
+              <button id="btn_custfind" class="search_find_img"></button>
+            </div>
+
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+      <p>
+        <code>div.detail_input_bg</code>의 class에 <code>has_button</code>을 추가하고, 안에 <code>&lt;button id="btn_custfind" class="search_find_img"&gt;&lt;/button&gt;</code>코드를 추가합니다.<br />
+      </p>
+
+<pre class="language-markup">
+  <code>
+
+    &lt;div id="freeform" class="detail_box ver2"&gt;
+      &lt;div class="detail_row detail_row_bb"&gt;
+
+        &lt;label class="detail_label w100" for="COMP_NAME"&gt;회사명&lt;/label&gt;
+        &lt;div class="detail_input_bg has_button"&gt;
+          &lt;input id="COMP_NAME" type="text" &gt;
+          &lt;button id="btn_custfind" class="search_find_img"&gt;&lt;/button&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  </code>
+</pre>
+
+
+
+      <h4>코드-명칭 스타일 검색버튼 추가</h4>
+      <div class="wrap-ff" style="width: 500px;">
+        <div id="freeform" class="detail_box ver2" >
+          <div class="detail_row detail_row_bb">
+
+            <label class="detail_label w100" for="COMP_NAME">회사명</label>
+            <div class="detail_input_bg w100">
+              <input id="COMP_CODE" type="text" >
+            </div>
+            <div class="detail_input_bg has_button noborder">
+              <input id="COMP_NAME" type="text" >
+              <button id="btn_custfind" class="search_find_img"></button>
+            </div>
+
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+      <p>
+        코드와 명칭 사이에 있는 <code>&lt;label&gt;&lt;/label&gt;</code> 을 지우고,<br />
+        명칭 칼럼의 <code>div.detail_input_bg</code> class에 <code>noborder</code>를 추가하면, 왼쪽 Border가 지워집니다.<br />
+      </p>
+
+<pre class="language-markup">
+  <code>
+
+    &lt;div id="freeform" class="detail_box ver2"&gt;
+      &lt;div class="detail_row detail_row_bb"&gt;
+
+        &lt;label class="detail_label w100" for="COMP_NAME"&gt;회사명&lt;/label&gt;
+        &lt;div class="detail_input_bg w100"&gt;
+          &lt;input id="COMP_CODE" type="text" &gt;
+        &lt;/div&gt;
+        &lt;div class="detail_input_bg has_button"&gt;
+          &lt;input id="COMP_NAME" type="text" &gt;
+          &lt;button id="btn_custfind" class="search_find_img"&gt;&lt;/button&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  </code>
+</pre>
+
+
+
+format 설정
+
+
+
+
+
+
   </body>
 </html>
