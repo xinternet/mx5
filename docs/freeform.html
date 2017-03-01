@@ -218,18 +218,20 @@
 
       <h4>마지막 칼럼 자동 채우기</h4>
       <div class="wrap-ff" style="width: 500px;">
-        <div class="detail_row">
+        <div id="freeform" class="detail_box ver2" >
+          <div class="detail_row detail_row_bb">
 
-          <label class="detail_label w100" for="COMP_NAME">회사명</label>
-          <div class="detail_input_bg w140">
-            <input id="COMP_NAME" type="text" >
+            <label class="detail_label w100" for="COMP_NAME">회사명</label>
+            <div class="detail_input_bg w140">
+              <input id="COMP_NAME" type="text" >
+            </div>
+
+            <label class="detail_label w100" for="CEO_NAME">대표</label>
+            <div class="detail_input_bg">
+              <input id="CEO_NAME" type="text" >
+            </div>
+
           </div>
-
-          <label class="detail_label w100" for="CEO_NAME">대표</label>
-          <div class="detail_input_bg">
-            <input id="CEO_NAME" type="text" >
-          </div>
-
         </div>
       </div>
       <p>
@@ -238,19 +240,20 @@
 
 <pre class="language-markup">
   <code>
+    &lt;div id="freeform" class="detail_box ver2"&gt;
+      &lt;div class="detail_row detail_row_bb"&gt;
 
-    &lt;div class="detail_row"&gt;
+        &lt;label class="detail_label w100" for="COMP_NAME"&gt;회사명&lt;/label&gt;
+        &lt;div class="detail_input_bg w140"&gt;
+          &lt;input id="COMP_NAME" type="text" &gt;
+        &lt;/div&gt;
 
-      &lt;label class="detail_label w100" for="COMP_NAME"&gt;회사명&lt;/label&gt;
-      &lt;div class="detail_input_bg w140"&gt;
-        &lt;input id="COMP_NAME" type="text" &gt;
+        &lt;label class="detail_label w100" for="CEO_NAME"&gt;대표&lt;/label&gt;
+        &lt;div class="detail_input_bg"&gt;
+          &lt;input id="CEO_NAME" type="text" &gt;
+        &lt;/div&gt;
+
       &lt;/div&gt;
-
-      &lt;label class="detail_label w100" for="CEO_NAME"&gt;대표&lt;/label&gt;
-      &lt;div class="detail_input_bg"&gt;
-        &lt;input id="CEO_NAME" type="text" &gt;
-      &lt;/div&gt;
-
     &lt;/div&gt;
 
   </code>
@@ -262,20 +265,22 @@
 
       <h4>마지막 칼럼 고정하기</h4>
       <div class="wrap-ff" style="width: 500px;">
-        <div class="detail_row">
+        <div id="freeform" class="detail_box ver2" >
+          <div class="detail_row detail_row_bb">
 
-          <label class="detail_label w100" for="COMP_NAME">회사명</label>
-          <div class="detail_input_bg w100">
-            <input id="COMP_NAME" type="text" >
+            <label class="detail_label w100" for="COMP_NAME">회사명</label>
+            <div class="detail_input_bg w100">
+              <input id="COMP_NAME" type="text" >
+            </div>
+
+            <label class="detail_label w100" for="CEO_NAME">대표</label>
+            <div class="detail_input_bg w100">
+              <input id="CEO_NAME" type="text" >
+            </div>
+
+            <div class="row-closing"></div>
+
           </div>
-
-          <label class="detail_label w100" for="CEO_NAME">대표</label>
-          <div class="detail_input_bg w100">
-            <input id="CEO_NAME" type="text" >
-          </div>
-
-          <div class="row-closing"></div>
-
         </div>
       </div>
       <p>
@@ -285,20 +290,22 @@
 <pre class="language-markup">
   <code>
 
-    &lt;div class="detail_row"&gt;
+    &lt;div id="freeform" class="detail_box ver2"&gt;
+      &lt;div class="detail_row detail_row_bb"&gt;
 
-      &lt;label class="detail_label w100" for="COMP_NAME"&gt;회사명&lt;/label&gt;
-      &lt;div class="detail_input_bg w100"&gt;
-        &lt;input id="COMP_NAME" type="text" &gt;
+        &lt;label class="detail_label w100" for="COMP_NAME"&gt;회사명&lt;/label&gt;
+        &lt;div class="detail_input_bg w100"&gt;
+          &lt;input id="COMP_NAME" type="text" &gt;
+        &lt;/div&gt;
+
+        &lt;label class="detail_label w100" for="CEO_NAME"&gt;대표&lt;/label&gt;
+        &lt;div class="detail_input_bg w100"&gt;
+          &lt;input id="CEO_NAME" type="text" &gt;
+        &lt;/div&gt;
+
+        &lt;div class="row-closing"&gt;&lt;/div&gt;
+
       &lt;/div&gt;
-
-      &lt;label class="detail_label w100" for="CEO_NAME"&gt;대표&lt;/label&gt;
-      &lt;div class="detail_input_bg w100"&gt;
-        &lt;input id="CEO_NAME" type="text" &gt;
-      &lt;/div&gt;
-
-      &lt;div class="row-closing"&gt;&lt;/div&gt;
-
     &lt;/div&gt;
 
   </code>
