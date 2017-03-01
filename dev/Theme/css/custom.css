@@ -22,6 +22,10 @@ h2 {
   font-size: 12px;
 }
 
+.wrap-ff .detail_box {
+  border-top: 0;
+}
+
 .wrap-ff ul, .wrap-ff ol {
   padding-left: 0;
 }
