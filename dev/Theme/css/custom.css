@@ -20,6 +20,8 @@ h2 {
 .wrap_ff {
   font-family: 'Nanum Gothic', 'NanumGothic', 'Malgun Gothic', Dotum, Gulim, verdana, arial, sans-serif !important;
   font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .wrap-ff .detail_box {

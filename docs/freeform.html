@@ -39,7 +39,6 @@
           Grid와 Share 하는 Freeform(ver2)을 만드는 방법을 안내합니다.<br />
           mighty-2.0.2.css 이상에서 추가되었습니다.
 
-
           <div class="wrap-ff" style="width: 900px;">
             <div id="freeform" class="detail_box ver2 has_title" >
               <label class="sub_title">수주정보</label>
@@ -96,9 +95,9 @@
               <div class="detail_row detail_row_bb">
                 <label class="detail_label w110">PM성명</label>
                 <div class="detail_input_bg w140 has_button">
-                      <input id="EMP_NAME" type="text" >
-                      <button id="btn_pmfind" class="search_find_img">
-                    </button></div>
+                  <input id="EMP_NAME" type="text" >
+                  <button id="btn_pmfind" class="search_find_img"></button>
+                </div>
 
                 <label class="detail_label w110">수주구분</label>
                 <div class="detail_input_bg w140">      
@@ -144,35 +143,167 @@
 
 
       <h2>
-        Vertical
+        전체 Layout
       </h2>
       <hr>
       <p>
-        <code>.x5-row</code> 를 적용하면 세로 높이는 안에 들어있는 요소의 height에 따라 자동으로 고정됩니다.<br />
-        <code>.x5-h-(number)</code> 를 적용한 요소는 height가 (number)px 로 고정됩니다. (number)는 5~1000까지 5px단위로 사용 가능합니다. 예) .x5-h-35 (O), .x5-h-32 (X) <br /> 
-        <code>.x5-h-rate-(number)</code> 를 적용한 요소는 Parent height의 (number)% 로 height가 적용되고, window resize에 따라 같은 비율로 height가 변경됩니다. (number)는 1~100까지 사용 가능합니다. 예) .x5-h-rate-35 (O), .x5-h-rate-32 (O)<br />
-        <code>.x5-h-fill</code> 를 적용한 요소는 parent의 남은 height를 채웁니다. window resize에 따라 높이가 자동 변경됩니다. <code>.x5-h-fill</code> 요소가 여러개일 경우, 남은 공간을 비율로 나눠서 채웁니다. ie8에 적용하기 위해서 <code>.x5-h-fill</code>는 자바스크립트로 높이를 계산합니다. 사용하지 않은 레이아웃이 더 빠르게 동작할 가능성이 있습니다.
+        <code>.detail_box</code>와 <code>.ver2</code> 를 적용하면 시작됩니다.<br />
+        <code>.detail_row</code>는 한 행을 이룹니다. 예) table 태그의 tr <br />
+        <code>.detail_row_bb</code>를 마지막 행에 추가하면 아래 border이 추가됩니다. <br />
       </p>
 
 <pre class="language-markup">
   <code>
-  &lt;div class="x5-row"&gt;
-    ...
+
+  &lt;div id="freeform" class="detail_box ver2"&gt;
+    
+    &lt;div class="detail_row"&gt;
+      ...
+    &lt;/div&gt;
+
+    &lt;div class="detail_row"&gt;
+      ...
+    &lt;/div&gt;
+
+    &lt;div class="detail_row detail_row_bb"&gt;
+      ...
+    &lt;/div&gt;
+
   &lt;/div&gt;
 
-  &lt;div class="<span class="text-danger">x5-h-30</span>"&gt;
-    ...
-  &lt;/div&gt;
-
-  &lt;div class="<span class="text-danger">x5-h-rate-30</span>"&gt;
-    ...
-  &lt;/div&gt;
-
-  &lt;div class="<span class="text-danger">x5-h-fill</span>"&gt;
-    ...
-  &lt;/div&gt;
   </code>
 </pre>
+
+
+
+
+      <h2>
+        각 행의 구성 (.detail_row)
+      </h2>
+      <hr>
+      <p>
+        <code>label.detail_label</code>과 <code>div.detail_input_bg</code>의 쌍으로 한 항목을 구성합니다.<br />
+        <code>.w100</code>은 width 100px 를 의미합니다. 10~1005까지 5의배수로 사용할 수 있습니다. 예) w10 w105 w500 w1005<br />
+        5의 배수가 아닌 예를들어 <code>.w276</code>은 동작하지 않습니다. <br />
+        <code>label.detail_label</code>과 <code>div.detail_input_bg</code>에만 width를 설정하세요. 안에 있는 input이나 select는 parent의 100% width로 동작합니다.<br />
+      </p>
+
+<pre class="language-markup">
+  <code>
+
+    &lt;div class="detail_row"&gt;
+
+      &lt;label class="detail_label w100" for="COMP_NAME"&gt;회사명&lt;/label&gt;
+      &lt;div class="detail_input_bg w140"&gt;
+        &lt;input id="COMP_NAME" type="text" &gt;
+      &lt;/div&gt;
+
+      &lt;label class="detail_label w100" for="CEO_NAME"&gt;대표&lt;/label&gt;
+      &lt;div class="detail_input_bg w140"&gt;
+        &lt;input id="CEO_NAME" type="text" &gt;
+      &lt;/div&gt;
+
+      &lt;label class="detail_label w100" for="TEL"&gt;전화번호&lt;/label&gt;
+      &lt;div class="detail_input_bg"&gt;
+        &lt;input id="COMP_NAME" type="text" &gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+  </code>
+</pre>
+
+
+
+
+      <h4>마지막 칼럼 자동 채우기</h4>
+      <div class="wrap-ff" style="width: 500px;">
+        <div class="detail_row">
+
+          <label class="detail_label w100" for="COMP_NAME">회사명</label>
+          <div class="detail_input_bg w140">
+            <input id="COMP_NAME" type="text" >
+          </div>
+
+          <label class="detail_label w100" for="CEO_NAME">대표</label>
+          <div class="detail_input_bg">
+            <input id="CEO_NAME" type="text" >
+          </div>
+
+        </div>
+      </div>
+      <p>
+        마지막 칼럼의 <code>div.detail_input_bg</code>에 width를 지정하지 않으면 freeform width에 자동으로 맞춥니다.<br />
+      </p>
+
+<pre class="language-markup">
+  <code>
+
+    &lt;div class="detail_row"&gt;
+
+      &lt;label class="detail_label w100" for="COMP_NAME"&gt;회사명&lt;/label&gt;
+      &lt;div class="detail_input_bg w140"&gt;
+        &lt;input id="COMP_NAME" type="text" &gt;
+      &lt;/div&gt;
+
+      &lt;label class="detail_label w100" for="CEO_NAME"&gt;대표&lt;/label&gt;
+      &lt;div class="detail_input_bg"&gt;
+        &lt;input id="CEO_NAME" type="text" &gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+  </code>
+</pre>
+
+
+
+
+
+      <h4>마지막 칼럼 고정하기</h4>
+      <div class="wrap-ff" style="width: 500px;">
+        <div class="detail_row">
+
+          <label class="detail_label w100" for="COMP_NAME">회사명</label>
+          <div class="detail_input_bg w100">
+            <input id="COMP_NAME" type="text" >
+          </div>
+
+          <label class="detail_label w100" for="CEO_NAME">대표</label>
+          <div class="detail_input_bg w100">
+            <input id="CEO_NAME" type="text" >
+          </div>
+
+          <div class="row-closing"></div>
+
+        </div>
+      </div>
+      <p>
+        마지막 칼럼의 <code>div.detail_input_bg</code>에 width를 고정하고, 뒤에 빈칼럼 <code>&lt;div class="row-closing"&gt;&lt;/div&gt;</code><br />
+      </p>
+
+<pre class="language-markup">
+  <code>
+
+    &lt;div class="detail_row"&gt;
+
+      &lt;label class="detail_label w100" for="COMP_NAME"&gt;회사명&lt;/label&gt;
+      &lt;div class="detail_input_bg w100"&gt;
+        &lt;input id="COMP_NAME" type="text" &gt;
+      &lt;/div&gt;
+
+      &lt;label class="detail_label w100" for="CEO_NAME"&gt;대표&lt;/label&gt;
+      &lt;div class="detail_input_bg w100"&gt;
+        &lt;input id="CEO_NAME" type="text" &gt;
+      &lt;/div&gt;
+
+      &lt;div class="row-closing"&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+
+  </code>
+</pre>
+
 
 
 
