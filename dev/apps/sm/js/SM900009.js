@@ -6,6 +6,7 @@ $(function() {
 
 var setTab = function() {
   $("#tab-guide").append('<li role="presentation" ><a href="#guide-content" id="grid-js" aria-controls="guide-content" role="tab" data-toggle="tab">Grid.js</a></li>');
+  $("#tab-guide").append('<li role="presentation" ><a href="#guide-content" id="freeform" aria-controls="guide-content" role="tab" data-toggle="tab">Freeform</a></li>');
 
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     switch($(this).attr("id")) {
