@@ -32,132 +32,136 @@
   </head>
   <body>
     <div class="container">
+      <div class="row">
+        <div class="col-md-10">
 
-      <h1 id="layout">
-        Freeform (ver2)
-      </h1>
-      
-      <div class="panel panel-default">
-        <div class="panel-body">
-          Grid와 Share 하는 Freeform(ver2)을 만드는 방법을 안내합니다.<br />
-          mighty-2.0.2.css 이상에서 추가되었습니다.
+          <div class="page-header">
+            <h1 id="layout">
+              Freeform (ver2)
+            </h1>
+          </div>
+          
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Grid와 Share 하는 Freeform(ver2)을 만드는 방법을 안내합니다.<br />
+              mighty-2.0.2.css 이상에서 추가되었습니다.
 
-          <div class="wrap-ff" style="width: 900px;">
-            <div id="freeform" class="detail_box ver2 has_title" >
-              <label class="sub_title">수주정보</label>
+              <div class="wrap-ff" style="width: 900px;">
+                <div id="freeform" class="detail_box ver2 has_title" >
+                  <label class="sub_title">수주정보</label>
 
-              <div class="detail_row">
-                <label class="detail_label w110">공사명</label>
-                <div class="detail_input_bg w100">
-                  <input id="EST_CODE" type="text" class="tac" >
+                  <div class="detail_row">
+                    <label class="detail_label w110">공사명</label>
+                    <div class="detail_input_bg w100">
+                      <input id="EST_CODE" type="text" class="tac" >
+                    </div>
+                    <div class="detail_input_bg w280 noborder has_button">
+                      <input id="EST_NAME" type="text" >
+                      <button id="btn_Estfind" class="search_find_img"></button>
+                    </div>
+                    
+                    <label class="detail_label w110">건설사</label>
+                    <div class="detail_input_bg w100">
+                      <input id="CNST_CODE" type="text" class="tac" >
+                    </div>
+                    <div class="detail_input_bg noborder has_button">
+                      <input id="CNST_NAME" type="text" >
+                      <button id="btn_Custfind" class="search_find_img"></button>
+                    </div>
+                  </div>
+                  
+                  <div class="detail_row">
+                    <label class="detail_label w110">공사유형</label>
+                    <div class="detail_input_bg w140">
+                      <select id="CONST_DIV" ><option value="000">표준공종</option><option value="101">아파트</option><option value="102">주상복합</option><option value="103">고급주택</option><option value="104">타운하우스</option><option value="105">초고층아파트</option><option value="106">호텔</option><option value="107">콘도</option><option value="108">연수원</option><option value="109">기숙사</option><option value="110">오피스</option><option value="111">초고층오피스</option><option value="112">청사</option><option value="113">역사</option><option value="114">공항</option><option value="115">쇼핑몰</option><option value="116">유통</option><option value="117">극장</option><option value="118">미술관</option><option value="119">문화회관</option><option value="120">전시장</option><option value="121">일반공장</option><option value="122">아파트형 공장 </option><option value="123">반도체</option><option value="124">학교</option><option value="125">연구소</option><option value="126">병원</option><option value="127">골프장</option><option value="128">운동장</option><option value="129">체육관</option><option value="130">스키장</option><option value="131">워터파크</option><option value="132">놀이동산</option><option value="133">군사</option><option value="134">FED </option><option value="135">항만</option><option value="136">하수처리장</option><option value="137">소각로</option><option value="138">열배관관로</option><option value="139">가스관로</option><option value="140">화학공장</option><option value="141">관로공사</option><option value="142">가스저장시설</option><option value="143">발전설비</option><option value="144">원자력설비</option><option value="145">해외일반설비</option><option value="146">유류저장시설</option><option value="147">이송설비</option><option value="148">산소공장</option><option value="150">GMP</option><option value="164">IT공사</option></select>
+                    </div>
+
+                    <label class="detail_label w110">예상수주시기</label>
+                    <div class="detail_input_bg w60">
+                      <input id="YY" type="text" class="tac" >
+                    </div>
+                    <div class="detail_input_bg w10 noborder">
+                      년 
+                    </div>
+                    <div class="detail_input_bg w55 noborder">
+                      <select id="MM" ><option value="01">1월</option><option value="02">2월</option><option value="03">3월</option><option value="04">4월</option><option value="05">5월</option><option value="06">6월</option><option value="07">7월</option><option value="08">8월</option><option value="09">9월</option><option value="10">10월</option><option value="11">11월</option><option value="12">12월</option></select>
+                    </div>
+                    <div class="detail_input_bg  noborder"> 
+                    </div>  
+                    <label class="detail_label w110">공사예상금액</label>
+                    <div class="detail_input_bg w140">
+                      <input id="EXPT_AMT" type="text" class="detail_amt"  style="text-align: right;">
+                    </div>
+                    <label class="detail_label w110">수주금액</label>
+                    <div class="detail_input_bg">
+                      <input id="ACHV_AMT" type="text" class="detail_amt"  style="text-align: right;">
+                    </div>
+                    
+                  </div>
+
+                  <div class="detail_row detail_row_bb">
+                    <label class="detail_label w110">PM성명</label>
+                    <div class="detail_input_bg w140 has_button">
+                      <input id="EMP_NAME" type="text" >
+                      <button id="btn_pmfind" class="search_find_img"></button>
+                    </div>
+
+                    <label class="detail_label w110">수주구분</label>
+                    <div class="detail_input_bg w140">      
+                      <select id="RECV_DIV" ><option value="1">신규수주</option><option value="2">설계변경</option></select>
+                    </div>
+
+                    <label class="detail_label w110">진행상황</label>
+                    <div class="detail_input_bg">
+                      <select id="STATUS_DIV" ><option value="1">종료</option><option value="2">준비</option><option value="3">수주계획</option><option value="4">수주</option><option value="5">입찰참여</option><option value="6">미수주</option></select>
+                    </div>
+                  </div>
                 </div>
-                <div class="detail_input_bg w280 noborder has_button">
-                  <input id="EST_NAME" type="text" >
-                  <button id="btn_Estfind" class="search_find_img"></button>
-                </div>
-                
-                <label class="detail_label w110">건설사</label>
-                <div class="detail_input_bg w100">
-                  <input id="CNST_CODE" type="text" class="tac" >
-                </div>
-                <div class="detail_input_bg noborder has_button">
-                  <input id="CNST_NAME" type="text" >
-                  <button id="btn_Custfind" class="search_find_img"></button>
-                </div>
+
+                <div class="clearfix"></div>
               </div>
-              
-              <div class="detail_row">
-                <label class="detail_label w110">공사유형</label>
-                <div class="detail_input_bg w140">
-                  <select id="CONST_DIV" ><option value="000">표준공종</option><option value="101">아파트</option><option value="102">주상복합</option><option value="103">고급주택</option><option value="104">타운하우스</option><option value="105">초고층아파트</option><option value="106">호텔</option><option value="107">콘도</option><option value="108">연수원</option><option value="109">기숙사</option><option value="110">오피스</option><option value="111">초고층오피스</option><option value="112">청사</option><option value="113">역사</option><option value="114">공항</option><option value="115">쇼핑몰</option><option value="116">유통</option><option value="117">극장</option><option value="118">미술관</option><option value="119">문화회관</option><option value="120">전시장</option><option value="121">일반공장</option><option value="122">아파트형 공장 </option><option value="123">반도체</option><option value="124">학교</option><option value="125">연구소</option><option value="126">병원</option><option value="127">골프장</option><option value="128">운동장</option><option value="129">체육관</option><option value="130">스키장</option><option value="131">워터파크</option><option value="132">놀이동산</option><option value="133">군사</option><option value="134">FED </option><option value="135">항만</option><option value="136">하수처리장</option><option value="137">소각로</option><option value="138">열배관관로</option><option value="139">가스관로</option><option value="140">화학공장</option><option value="141">관로공사</option><option value="142">가스저장시설</option><option value="143">발전설비</option><option value="144">원자력설비</option><option value="145">해외일반설비</option><option value="146">유류저장시설</option><option value="147">이송설비</option><option value="148">산소공장</option><option value="150">GMP</option><option value="164">IT공사</option></select>
-                </div>
 
-                <label class="detail_label w110">예상수주시기</label>
-                <div class="detail_input_bg w60">
-                  <input id="YY" type="text" class="tac" >
-                </div>
-                <div class="detail_input_bg w10 noborder">
-                  년 
-                </div>
-                <div class="detail_input_bg w55 noborder">
-                  <select id="MM" ><option value="01">1월</option><option value="02">2월</option><option value="03">3월</option><option value="04">4월</option><option value="05">5월</option><option value="06">6월</option><option value="07">7월</option><option value="08">8월</option><option value="09">9월</option><option value="10">10월</option><option value="11">11월</option><option value="12">12월</option></select>
-                </div>
-                <div class="detail_input_bg  noborder"> 
-                </div>  
-                <label class="detail_label w110">공사예상금액</label>
-                <div class="detail_input_bg w140">
-                  <input id="EXPT_AMT" type="text" class="detail_amt"  style="text-align: right;">
-                </div>
-                <label class="detail_label w110">수주금액</label>
-                <div class="detail_input_bg">
-                  <input id="ACHV_AMT" type="text" class="detail_amt"  style="text-align: right;">
-                </div>
-                
-              </div>
 
-              <div class="detail_row detail_row_bb">
-                <label class="detail_label w110">PM성명</label>
-                <div class="detail_input_bg w140 has_button">
-                  <input id="EMP_NAME" type="text" >
-                  <button id="btn_pmfind" class="search_find_img"></button>
-                </div>
-
-                <label class="detail_label w110">수주구분</label>
-                <div class="detail_input_bg w140">      
-                  <select id="RECV_DIV" ><option value="1">신규수주</option><option value="2">설계변경</option></select>
-                </div>
-
-                <label class="detail_label w110">진행상황</label>
-                <div class="detail_input_bg">
-                  <select id="STATUS_DIV" ><option value="1">종료</option><option value="2">준비</option><option value="3">수주계획</option><option value="4">수주</option><option value="5">입찰참여</option><option value="6">미수주</option></select>
-                </div>
-              </div>
             </div>
-
-            <div class="clearfix"></div>
           </div>
 
 
-        </div>
-      </div>
+
+
+
+          <h2>
+            시작하기
+          </h2>
+          <hr>
+          <p>
+            Freeform(ver2)의 특징 및 참고할 내용
+          </p>
+
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <ul>
+                <li>태그 변경. 항목명의 경우 html Tag를 div => label 로 변경</li>
+                <li>width 100% Freeform 생성(가로배열 freeform 생성)</li>
+              </ul>
+              <ul>
+                <li>html태그 내에 Inline Style (<code>style="width: 100px"</code>)을 가급적 사용하지 않습니다. 모양이 특이한 경우 적절하게 사용하세요.</li>
+                <li>복잡한 모양은 만들기 어렵습니다. 힘들게 똑같이 만드는 것 보다 만들기 쉬운 형태로 다시 디자인 하세요.</li>
+              </ul>
+            </div>
+          </div>
 
 
 
 
-
-      <h2>
-        시작하기
-      </h2>
-      <hr>
-      <p>
-        Freeform(ver2)의 특징 및 참고할 내용
-      </p>
-
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <ul>
-            <li>태그 변경. 항목명의 경우 html Tag를 div => label 로 변경</li>
-            <li>width 100% Freeform 생성(가로배열 freeform 생성)</li>
-          </ul>
-          <ul>
-            <li>html태그 내에 Inline Style (<code>style="width: 100px"</code>)을 가급적 사용하지 않습니다. 모양이 특이한 경우 적절하게 사용하세요.</li>
-            <li>복잡한 모양은 만들기 어렵습니다. 힘들게 똑같이 만드는 것 보다 만들기 쉬운 형태로 다시 디자인 하세요.</li>
-          </ul>
-        </div>
-      </div>
-
-
-
-
-      <h2>
-        전체 Layout
-      </h2>
-      <hr>
-      <p>
-        <code>.detail_box</code>와 <code>.ver2</code> 를 적용하면 시작됩니다.<br />
-        <code>.detail_row</code>는 한 행을 이룹니다. 예) table 태그의 tr <br />
-        <code>.detail_row_bb</code>를 마지막 행에 추가하면 아래 border이 추가됩니다. <br />
-      </p>
+          <h2>
+            전체 Layout
+          </h2>
+          <hr>
+          <p>
+            <code>.detail_box</code>와 <code>.ver2</code> 를 적용하면 시작됩니다.<br />
+            <code>.detail_row</code>는 한 행을 이룹니다. 예) table 태그의 tr <br />
+            <code>.detail_row_bb</code>를 마지막 행에 추가하면 아래 border이 추가됩니다. <br />
+          </p>
 
 <pre class="language-markup">
   <code>
@@ -185,37 +189,37 @@
 
 
 
-      <h2>
-        Freeform Title 넣기
-      </h2>
-      <hr>
-      <div class="wrap-ff" style="width: 700px;">
-        <div id="freeform" class="detail_box ver2 has_title" >
-          <label class="sub_title">회사정보</label>
+          <h2>
+            Freeform Title 넣기
+          </h2>
+          <hr>
+          <div class="wrap-ff" style="width: 700px;">
+            <div id="freeform" class="detail_box ver2 has_title" >
+              <label class="sub_title">회사정보</label>
 
-          <div class="detail_row detail_row_bb">
+              <div class="detail_row detail_row_bb">
 
-            <label class="detail_label w100" for="COMP_NAME">회사명</label>
-            <div class="detail_input_bg w140">
-              <input id="COMP_NAME" type="text" >
+                <label class="detail_label w100" for="COMP_NAME">회사명</label>
+                <div class="detail_input_bg w140">
+                  <input id="COMP_NAME" type="text" >
+                </div>
+
+                <label class="detail_label w100" for="CEO_NAME">대표</label>
+                <div class="detail_input_bg">
+                  <input id="CEO_NAME" type="text" >
+                </div>
+
+              </div>
+
+              <div class="row-closing"></div>
             </div>
-
-            <label class="detail_label w100" for="CEO_NAME">대표</label>
-            <div class="detail_input_bg">
-              <input id="CEO_NAME" type="text" >
-            </div>
-
+            <div class="clearfix"></div>
           </div>
 
-          <div class="row-closing"></div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-
-      <p>
-        <code>div.detail_box</code>의 class에 <code>has_title</code>를 추가하고, <br />
-        <code>&lt;label class="sub_title"&gt;회사정보&lt;/label&gt;</code>를 추가합니다.
-      </p>
+          <p>
+            <code>div.detail_box</code>의 class에 <code>has_title</code>를 추가하고, <br />
+            <code>&lt;label class="sub_title"&gt;회사정보&lt;/label&gt;</code>를 추가합니다.
+          </p>
 
 <pre class="language-markup">
   <code>
@@ -248,16 +252,16 @@
 
 
 
-      <h2>
-        각 행의 구성 (.detail_row)
-      </h2>
-      <hr>
-      <p>
-        <code>label.detail_label</code>과 <code>div.detail_input_bg</code>의 쌍으로 한 항목을 구성합니다.<br />
-        <code>.w100</code>은 width 100px 를 의미합니다. 10~1005까지 5의배수로 사용할 수 있습니다. 예) w10 w105 w500 w1005<br />
-        5의 배수가 아닌 예를들어 <code>.w276</code>은 동작하지 않습니다. <br />
-        <code>label.detail_label</code>과 <code>div.detail_input_bg</code>에만 width를 설정하세요. 안에 있는 input이나 select는 parent의 100% width로 동작합니다.<br />
-      </p>
+          <h2>
+            각 행의 구성 (.detail_row)
+          </h2>
+          <hr>
+          <p>
+            <code>label.detail_label</code>과 <code>div.detail_input_bg</code>의 쌍으로 한 항목을 구성합니다.<br />
+            <code>.w100</code>은 width 100px 를 의미합니다. 10~1005까지 5의배수로 사용할 수 있습니다. 예) w10 w105 w500 w1005<br />
+            5의 배수가 아닌 예를들어 <code>.w276</code>은 동작하지 않습니다. <br />
+            <code>label.detail_label</code>과 <code>div.detail_input_bg</code>에만 width를 설정하세요. 안에 있는 input이나 select는 parent의 100% width로 동작합니다.<br />
+          </p>
 
 <pre class="language-markup">
   <code>
@@ -287,31 +291,31 @@
 
 
 
-      <h4>마지막 칼럼 자동 채우기</h4>
-      <div class="wrap-ff" style="width: 700px;">
-        <div id="freeform" class="detail_box ver2" >
-          <div class="detail_row detail_row_bb">
+          <h4>마지막 칼럼 자동 채우기</h4>
+          <div class="wrap-ff" style="width: 700px;">
+            <div id="freeform" class="detail_box ver2" >
+              <div class="detail_row detail_row_bb">
 
-            <label class="detail_label w100" for="COMP_NAME">회사명</label>
-            <div class="detail_input_bg w140">
-              <input id="COMP_NAME" type="text" >
+                <label class="detail_label w100" for="COMP_NAME">회사명</label>
+                <div class="detail_input_bg w140">
+                  <input id="COMP_NAME" type="text" >
+                </div>
+
+                <label class="detail_label w100" for="CEO_NAME">대표</label>
+                <div class="detail_input_bg">
+                  <input id="CEO_NAME" type="text" >
+                </div>
+
+              </div>
+
+              <div class="row-closing"></div>
             </div>
-
-            <label class="detail_label w100" for="CEO_NAME">대표</label>
-            <div class="detail_input_bg">
-              <input id="CEO_NAME" type="text" >
-            </div>
-
+            <div class="clearfix"></div>
           </div>
 
-          <div class="row-closing"></div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-
-      <p>
-        마지막 칼럼의 <code>div.detail_input_bg</code>에 width를 지정하지 않으면 freeform width에 자동으로 맞춥니다.<br />
-      </p>
+          <p>
+            마지막 칼럼의 <code>div.detail_input_bg</code>에 width를 지정하지 않으면 freeform width에 자동으로 맞춥니다.<br />
+          </p>
 
 
 <pre class="language-markup">
@@ -339,31 +343,31 @@
 
 
 
-      <h4>마지막 칼럼 고정하기</h4>
-      <div class="wrap-ff" style="width: 700px;">
-        <div id="freeform" class="detail_box ver2" >
-          <div class="detail_row detail_row_bb">
+          <h4>마지막 칼럼 고정하기</h4>
+          <div class="wrap-ff" style="width: 700px;">
+            <div id="freeform" class="detail_box ver2" >
+              <div class="detail_row detail_row_bb">
 
-            <label class="detail_label w100" for="COMP_NAME">회사명</label>
-            <div class="detail_input_bg w100">
-              <input id="COMP_NAME" type="text" >
+                <label class="detail_label w100" for="COMP_NAME">회사명</label>
+                <div class="detail_input_bg w100">
+                  <input id="COMP_NAME" type="text" >
+                </div>
+
+                <label class="detail_label w100" for="CEO_NAME">대표</label>
+                <div class="detail_input_bg w100">
+                  <input id="CEO_NAME" type="text" >
+                </div>
+
+                <div class="row-closing"></div>
+
+              </div>
             </div>
-
-            <label class="detail_label w100" for="CEO_NAME">대표</label>
-            <div class="detail_input_bg w100">
-              <input id="CEO_NAME" type="text" >
-            </div>
-
-            <div class="row-closing"></div>
-
+            <div class="clearfix"></div>
           </div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
 
-      <p>
-        마지막 칼럼의 <code>div.detail_input_bg</code>에 width를 고정하고, 뒤에 빈칼럼 <code>&lt;div class="row-closing"&gt;&lt;/div&gt;</code><br />
-      </p>
+          <p>
+            마지막 칼럼의 <code>div.detail_input_bg</code>에 width를 고정하고, 뒤에 빈칼럼 <code>&lt;div class="row-closing"&gt;&lt;/div&gt;</code><br />
+          </p>
 
 <pre class="language-markup">
   <code>
@@ -394,35 +398,35 @@
 
 
 
-      <h2>
-        스타일 변경
-      </h2>
-      <hr>
+          <h2>
+            스타일 변경
+          </h2>
+          <hr>
 
-      <p>
-        기간이나, 단위, 검색버튼과 같은 특이한 스타일을 지정합니다.
-      </p>
+          <p>
+            기간이나, 단위, 검색버튼과 같은 특이한 스타일을 지정합니다.
+          </p>
 
 
-      <h4>검색버튼 추가</h4>
-      <div class="wrap-ff" style="width: 500px;">
-        <div id="freeform" class="detail_box ver2" >
-          <div class="detail_row detail_row_bb">
+          <h4>검색버튼 추가</h4>
+          <div class="wrap-ff" style="width: 500px;">
+            <div id="freeform" class="detail_box ver2" >
+              <div class="detail_row detail_row_bb">
 
-            <label class="detail_label w100" for="COMP_NAME">회사명</label>
-            <div class="detail_input_bg has_button">
-              <input id="COMP_NAME" type="text" >
-              <button id="btn_custfind" class="search_find_img"></button>
+                <label class="detail_label w100" for="COMP_NAME">회사명</label>
+                <div class="detail_input_bg has_button">
+                  <input id="COMP_NAME" type="text" >
+                  <button id="btn_custfind" class="search_find_img"></button>
+                </div>
+
+              </div>
             </div>
-
+            <div class="clearfix"></div>
           </div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
 
-      <p>
-        <code>div.detail_input_bg</code>의 class에 <code>has_button</code>을 추가하고, 안에 <code>&lt;button id="btn_custfind" class="search_find_img"&gt;&lt;/button&gt;</code>코드를 추가합니다.<br />
-      </p>
+          <p>
+            <code>div.detail_input_bg</code>의 class에 <code>has_button</code>을 추가하고, 안에 <code>&lt;button id="btn_custfind" class="search_find_img"&gt;&lt;/button&gt;</code>코드를 추가합니다.<br />
+          </p>
 
 <pre class="language-markup">
   <code>
@@ -444,29 +448,29 @@
 
 
 
-      <h4>코드-명칭 스타일 검색버튼 추가</h4>
-      <div class="wrap-ff" style="width: 500px;">
-        <div id="freeform" class="detail_box ver2" >
-          <div class="detail_row detail_row_bb">
+          <h4>코드-명칭 스타일 검색버튼 추가</h4>
+          <div class="wrap-ff" style="width: 500px;">
+            <div id="freeform" class="detail_box ver2" >
+              <div class="detail_row detail_row_bb">
 
-            <label class="detail_label w100" for="COMP_NAME">회사명</label>
-            <div class="detail_input_bg w100">
-              <input id="COMP_CODE" type="text" >
-            </div>
-            <div class="detail_input_bg has_button noborder">
-              <input id="COMP_NAME" type="text" >
-              <button id="btn_custfind" class="search_find_img"></button>
-            </div>
+                <label class="detail_label w100" for="COMP_NAME">회사명</label>
+                <div class="detail_input_bg w100">
+                  <input id="COMP_CODE" type="text" >
+                </div>
+                <div class="detail_input_bg has_button noborder">
+                  <input id="COMP_NAME" type="text" >
+                  <button id="btn_custfind" class="search_find_img"></button>
+                </div>
 
+              </div>
+            </div>
+            <div class="clearfix"></div>
           </div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
 
-      <p>
-        코드와 명칭 사이에 있는 <code>&lt;label&gt;&lt;/label&gt;</code> 을 지우고,<br />
-        명칭 칼럼의 <code>div.detail_input_bg</code> class에 <code>noborder</code>를 추가하면, 왼쪽 Border가 지워집니다.<br />
-      </p>
+          <p>
+            코드와 명칭 사이에 있는 <code>&lt;label&gt;&lt;/label&gt;</code> 을 지우고,<br />
+            명칭 칼럼의 <code>div.detail_input_bg</code> class에 <code>noborder</code>를 추가하면, 왼쪽 Border가 지워집니다.<br />
+          </p>
 
 <pre class="language-markup">
   <code>
@@ -493,33 +497,33 @@
 
 
 
-      <h4>기간 (시작-종료일)</h4>
-      <div class="wrap-ff" style="width: 500px;">
-        <div id="freeform" class="detail_box ver2" >
-          <div class="detail_row detail_row_bb">
+          <h4>기간 (시작-종료일)</h4>
+          <div class="wrap-ff" style="width: 500px;">
+            <div id="freeform" class="detail_box ver2" >
+              <div class="detail_row detail_row_bb">
 
-            <label class="detail_label w100" for="FROM_DATE">근무기간</label>
-            <div class="detail_input_bg w100">
-              <input id="FROM_DATE" type="text" class="detail_date">
-            </div>
-            <div class="detail_input_bg w20 noborder text_center">
-              ~
-            </div>
-            <div class="detail_input_bg w100 noborder">
-              <input id="TO_DATE" type="text" class="detail_date">
-            </div>
+                <label class="detail_label w100" for="FROM_DATE">근무기간</label>
+                <div class="detail_input_bg w100">
+                  <input id="FROM_DATE" type="text" class="detail_date">
+                </div>
+                <div class="detail_input_bg w20 noborder text_center">
+                  ~
+                </div>
+                <div class="detail_input_bg w100 noborder">
+                  <input id="TO_DATE" type="text" class="detail_date">
+                </div>
 
-            <div class="row-closing"></div>
+                <div class="row-closing"></div>
 
+              </div>
+            </div>
+            <div class="clearfix"></div>
           </div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
 
-      <p>
-        시작칼럼과 종료칼럼 사이에 있는 <code>&lt;label&gt;&lt;/label&gt;</code> 을 지우고,<br />
-        ~를 넣기 위한 <code>div.detail_input_bg</code> 를 추가하고, class에 <code>noborder text_center</code>를 추가합니다. <br />
-      </p>
+          <p>
+            시작칼럼과 종료칼럼 사이에 있는 <code>&lt;label&gt;&lt;/label&gt;</code> 을 지우고,<br />
+            ~를 넣기 위한 <code>div.detail_input_bg</code> 를 추가하고, class에 <code>noborder text_center</code>를 추가합니다. <br />
+          </p>
 
 <pre class="language-markup">
   <code>
@@ -549,30 +553,30 @@
 
 
 
-      <h4>Text 추가(단위)</h4>
-      <div class="wrap-ff" style="width: 500px;">
-        <div id="freeform" class="detail_box ver2" >
-          <div class="detail_row detail_row_bb">
+          <h4>Text 추가(단위)</h4>
+          <div class="wrap-ff" style="width: 500px;">
+            <div id="freeform" class="detail_box ver2" >
+              <div class="detail_row detail_row_bb">
 
-            <label class="detail_label w100" for="WORK_MM">근무월</label>
-            <div class="detail_input_bg w150">
-              <input id="WORK_MM" type="text" >
+                <label class="detail_label w100" for="WORK_MM">근무월</label>
+                <div class="detail_input_bg w150">
+                  <input id="WORK_MM" type="text" >
+                </div>
+                <div class="detail_input_bg w40 noborder">
+                  개월
+                </div>
+
+                <div class="row-closing"></div>
+
+              </div>
             </div>
-            <div class="detail_input_bg w40 noborder">
-              개월
-            </div>
-
-            <div class="row-closing"></div>
-
+            <div class="clearfix"></div>
           </div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
 
-      <p>
-        텍스트를 넣기 위한 <code>div.detail_input_bg</code> 를 추가하고, class에 <code>noborder</code>와 width class명을 추가합니다. <br />
-        이때, 주의할 점은 실제 텍스트의 width 보다 작게 잡을 경우, 전체적으로 배열이 잘 안맞을 수 있습니다.
-      </p>
+          <p>
+            텍스트를 넣기 위한 <code>div.detail_input_bg</code> 를 추가하고, class에 <code>noborder</code>와 width class명을 추가합니다. <br />
+            이때, 주의할 점은 실제 텍스트의 width 보다 작게 잡을 경우, 전체적으로 배열이 잘 안맞을 수 있습니다.
+          </p>
 
 <pre class="language-markup">
   <code>
@@ -599,24 +603,24 @@
 
 
 
-      <h4>체크박스</h4>
-      <div class="wrap-ff" style="width: 500px;">
-        <div id="freeform" class="detail_box ver2" >
-          <div class="detail_row detail_row_bb">
+          <h4>체크박스</h4>
+          <div class="wrap-ff" style="width: 500px;">
+            <div id="freeform" class="detail_box ver2" >
+              <div class="detail_row detail_row_bb">
 
-            <label class="detail_label w100" for="WORK_YN">퇴직여부</label>
-            <div class="detail_input_bg">
-              <input id="WORK_YN" type="checkbox" >
+                <label class="detail_label w100" for="WORK_YN">퇴직여부</label>
+                <div class="detail_input_bg">
+                  <input id="WORK_YN" type="checkbox" >
+                </div>
+
+              </div>
             </div>
-
+            <div class="clearfix"></div>
           </div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
 
-      <p>
-        input 컨트롤의 type을 <code>checkbox</code>로 수정합니다.
-      </p>
+          <p>
+            input 컨트롤의 type을 <code>checkbox</code>로 수정합니다.
+          </p>
 
 <pre class="language-markup">
   <code>
@@ -639,24 +643,24 @@
 
 
 
-      <h4>SELECT 스타일</h4>
-      <div class="wrap-ff" style="width: 500px;">
-        <div id="freeform" class="detail_box ver2" >
-          <div class="detail_row detail_row_bb">
+          <h4>SELECT 스타일</h4>
+          <div class="wrap-ff" style="width: 500px;">
+            <div id="freeform" class="detail_box ver2" >
+              <div class="detail_row detail_row_bb">
 
-            <label class="detail_label w100" for="DEPT_CODE">근무부서</label>
-            <div class="detail_input_bg">
-              <SELECT id="DEPT_CODE" ></SELECT>
+                <label class="detail_label w100" for="DEPT_CODE">근무부서</label>
+                <div class="detail_input_bg">
+                  <SELECT id="DEPT_CODE" ></SELECT>
+                </div>
+
+              </div>
             </div>
-
+            <div class="clearfix"></div>
           </div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
 
-      <p>
-        <code>select</code> Tag 스타일
-      </p>
+          <p>
+            <code>select</code> Tag 스타일
+          </p>
 
 <pre class="language-markup">
   <code>
@@ -680,34 +684,34 @@
 
 
 
-      <h2>
-        입력 format 수정 
-      </h2>
-      <hr>
+          <h2>
+            입력 format 수정 
+          </h2>
+          <hr>
 
-      <p>
-        달력, 숫자 등 입력format 설정
-      </p>
+          <p>
+            달력, 숫자 등 입력format 설정
+          </p>
 
 
-      <h4>날짜형식</h4>
-      <div class="wrap-ff" style="width: 500px;">
-        <div id="freeform" class="detail_box ver2" >
-          <div class="detail_row detail_row_bb">
+          <h4>날짜형식</h4>
+          <div class="wrap-ff" style="width: 500px;">
+            <div id="freeform" class="detail_box ver2" >
+              <div class="detail_row detail_row_bb">
 
-            <label class="detail_label w100" for="START_DATE">입사일자</label>
-            <div class="detail_input_bg">
-              <input id="START_DATE" type="text" class="detail_date" />
+                <label class="detail_label w100" for="START_DATE">입사일자</label>
+                <div class="detail_input_bg">
+                  <input id="START_DATE" type="text" class="detail_date" />
+                </div>
+
+              </div>
             </div>
-
+            <div class="clearfix"></div>
           </div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
 
-      <p>
-        <code>input</code>의 class에 <code>detail_date</code>을 추가합니다. 달력이 자동으로 표시됩니다.<br />
-      </p>
+          <p>
+            <code>input</code>의 class에 <code>detail_date</code>을 추가합니다. 달력이 자동으로 표시됩니다.<br />
+          </p>
 
 <pre class="language-markup">
   <code>
@@ -730,24 +734,24 @@
 
 
 
-      <h4>금액형식</h4>
-      <div class="wrap-ff" style="width: 500px;">
-        <div id="freeform" class="detail_box ver2" >
-          <div class="detail_row detail_row_bb">
+          <h4>금액형식</h4>
+          <div class="wrap-ff" style="width: 500px;">
+            <div id="freeform" class="detail_box ver2" >
+              <div class="detail_row detail_row_bb">
 
-            <label class="detail_label w100" for="SUPPLY_AMT">공급가액</label>
-            <div class="detail_input_bg">
-              <input id="SUPPLY_AMT" type="text" class="detail_amt" />
+                <label class="detail_label w100" for="SUPPLY_AMT">공급가액</label>
+                <div class="detail_input_bg">
+                  <input id="SUPPLY_AMT" type="text" class="detail_amt" />
+                </div>
+
+              </div>
             </div>
-
+            <div class="clearfix"></div>
           </div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
 
-      <p>
-        <code>input</code>의 class에 <code>detail_amt</code>를 추가하면, 오른쪽 정렬이 되고 숫자가 입력될 때, 콤마가 자동으로 입력됩니다.<br />
-      </p>
+          <p>
+            <code>input</code>의 class에 <code>detail_amt</code>를 추가하면, 오른쪽 정렬이 되고 숫자가 입력될 때, 콤마가 자동으로 입력됩니다.<br />
+          </p>
 
 <pre class="language-markup">
   <code>
@@ -772,13 +776,15 @@
 
 
 
-<br />
-<br />
-<br />
-<br />
-<br />
-
-
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        
+      </div>
+    </div>
+  </div>
 
 
 
