@@ -48,3 +48,19 @@ h4 {
 .wrap-ff .detail_box.ver2 label.sub_title {
   background: url(/mx5/dev/Theme/images/btn/tit_icon_pop.gif) no-repeat left 8px;
 }
+
+.wrap-ff .detail_label,
+.wrap-ff .detail_label2,
+.wrap-ff .detail_label3,
+.wrap-ff .detail_label_check,
+.wrap-ff .detail_label_check2,
+.wrap-ff .detail_label_check3,
+.wrap-ff .detail_label_left,
+.wrap-ff .detail_label_left2,
+.wrap-ff .detail_label_left3,
+.wrap-ff .detail_label_left_check,
+.wrap-ff .detail_label_left_check2,
+.wrap-ff .detail_label_left_check3
+{
+  background: url(/mx5/dev/Theme/images/detail_label_bg.gif) repeat 0 0;
+}
