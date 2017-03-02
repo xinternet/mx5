@@ -133,9 +133,8 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <ul>
-            <li>Semantic : 태그 변경. 항목명의 경우 html Tag를 div => label 로 변경</li>
+            <li>태그 변경. 항목명의 경우 html Tag를 div => label 로 변경</li>
             <li>width 100% Freeform 생성(가로배열 freeform 생성)</li>
-            <li>Code Snippet를 사용한 구문 생성</li>
           </ul>
           <ul>
             <li>html태그 내에 Inline Style (<code>style="width: 100px"</code>)을 가급적 사용하지 않습니다. 모양이 특이한 경우 적절하게 사용하세요.</li>
@@ -633,7 +632,45 @@
   </code>
 </pre>
 
-셀렉트 박스
+
+
+
+
+      <h4>SELECT 스타일</h4>
+      <div class="wrap-ff" style="width: 500px;">
+        <div id="freeform" class="detail_box ver2" >
+          <div class="detail_row detail_row_bb">
+
+            <label class="detail_label w100" for="DEPT_CODE">근무부서</label>
+            <div class="detail_input_bg">
+              <SELECT id="DEPT_CODE" ></SELECT>
+            </div>
+
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+      <p>
+        <code>select</code> Tag 스타일
+      </p>
+
+<pre class="language-markup">
+  <code>
+
+    &lt;div id="freeform" class="detail_box ver2"&gt;
+      &lt;div class="detail_row detail_row_bb"&gt;
+
+        &lt;label class="detail_label w100" for="DEPT_CODE"&gt;근무부서&lt;/label&gt;
+        &lt;div class="detail_input_bg"&gt;
+          &lt;select id="DEPT_CODE" &gt;&lt;/select&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  </code>
+</pre>
 
 
 
