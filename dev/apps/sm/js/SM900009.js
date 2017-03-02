@@ -15,6 +15,9 @@ var setTab = function() {
       case "grid-js" :
         $("#guide-content iframe").prop("src", "https://xinternet.github.io/mx5/docs/grid.js.html");
         break;
+      case "freeform" :
+        $("#guide-content iframe").prop("src", "https://xinternet.github.io/mx5/docs/freeform.html");
+        break;
     }
   });
 }
